@@ -1,15 +1,16 @@
 import fetch from 'isomorphic-fetch';
 import fs from 'fs';
+import path from 'path';
+
+const apiUrl = 'https://developer.hpe.com/dashboard/api';
 
 const getBlogPost = async slug =>
-  fetch(`https://developer.hpe.com/dashboard/api/post/title/${slug} `)
+  fetch(`${apiUrl}/post/title/${slug} `)
     .then(res => res.json())
     .then(data => data);
 
-const runScript = async () => {
-  const postData = await getBlogPost(
-    'hacktoberfest-2019-help-grommet-and-win-a-free-t-shirt-in-the-process',
-  );
+const createMdFromSlug = async slug => {
+  const postData = await getBlogPost(slug);
 
   // Convert the post to a markdown string
   let mdString = `---
@@ -41,11 +42,26 @@ tags: ${postData.tags.length ? postData.tags : '[]'}
   // Name and create the file
   const postDate = new Date(postData.date).toISOString().slice(0, 10);
   const filename = `${postDate}-${postData.slug.substring(0, 256)}.md`;
-
-  fs.writeFile(filename, mdString, err => {
+  const filePath = path.join('content', filename);
+  fs.writeFile(filePath, mdString, err => {
     if (err) throw err;
     console.log(`${filename} has been created successfully.`);
   });
 };
 
-runScript();
+const getAllBlogPosts = () =>
+  fetch(`${apiUrl}/posts?type=blog&page=1&count=1000`)
+    .then(res => res.json())
+    .then(data => data);
+
+createMdFromSlug(
+  'hacktoberfest-2019-help-grommet-and-win-a-free-t-shirt-in-the-process',
+);
+
+/* Not yet..... 🧨
+getAllBlogPosts().then(posts => {
+  for (let i = 0; posts.length > i; i += 1) {
+    createMdFromSlug(posts[i].slug);
+  }
+});
+*/
