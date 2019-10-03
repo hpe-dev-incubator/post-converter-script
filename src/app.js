@@ -16,6 +16,9 @@ const getBlogPost = async slug =>
 
 const createMdFromSlug = async slug => {
   const postData = await getBlogPost(slug);
+  const contentSections = postData.updatedSections || postData.sections;
+  // Colons in the title break frontmatter. Use encoded entity instead.
+  const postTitle = postData.title.replace(':', '&#58;');
   let tagsString = '[';
   // Use ternary for empty string conditionals in template literal otherwise
   // false will print to the string.
@@ -27,7 +30,7 @@ const createMdFromSlug = async slug => {
   );
   // Convert the post to a markdown string
   let mdString = `---
-title: ${postData.title}
+title: ${postTitle}
 date: ${postData.date}
 author: ${postData.author || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
@@ -35,14 +38,14 @@ path: ${slug}
 ---
 `;
 
-  for (let i = 0; postData.updatedSections.length > i; i += 1) {
-    const section = postData.updatedSections[i];
+  for (let i = 0; contentSections.length > i; i += 1) {
+    const section = contentSections[i];
     for (let j = 0; section.contentBlocks.length > j; j += 1) {
       const currBlock = section.contentBlocks[j];
       if (currBlock.blockType === 'BlockParagraph') {
         mdString = `${mdString}${currBlock.content}`;
       }
-      if (currBlock.blockType === 'BlockImage') {
+      if (currBlock.blockType === 'BlockImage' && currBlock.image) {
         const alt =
           currBlock.alt ||
           currBlock.image.title ||
