@@ -6,6 +6,7 @@ tags: []
 path: hpe-dev-at-kubecon-cloudnativecon-europe-2019
 ---
 ![group-picture](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/grouppicture-1560274699625.png)
+
 # HPE DEV at KubeCon + CloudNativeCon Europe 2019
 
 *Didier Lalli*

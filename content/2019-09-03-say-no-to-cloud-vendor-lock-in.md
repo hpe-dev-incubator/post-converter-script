@@ -6,6 +6,7 @@ tags: []
 path: say-no-to-cloud-vendor-lock-in
 ---
 ![gettyimages 761603815](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/gettyimages-761603815-1567544802064.jpg)
+
 During my 30 year technology career, working for Digital Equipment Corporation (DEC), Compaq Computer, Hewlett Packard (HP) and now Hewlett-Packard Enterprise (HPE), I was in the center of the action when the industry-standard server tsunami hit the computer industry. I rode the wave as we moved away from vendor-specific operating systems (HP-UX, SunOS, AIX, VMS) running on vendor-specific servers (HP, IBM, DEC, Sun) that were powered by vendor-specific processors (PA-RISC, Alpha, Sparc, Power, etc.). Intel x86 powered servers, running Linux, available from any kind of vendor, quickly took over. Death to vendor lock-in! That was our motto at the time. 
 
 Soon after, database and other software enablers ran into a similar situation. It was an open source snowball effect, having everything to do with avoiding vendor lock-in and encouraging customers to part ways with Oracle, DB2, and RDB. When virtualization technologies came along, they again started out very vendor specific (and still are with VMware, for the most part) but open source solutions also emerged, i.e OpenStack. These solutions now allow customers to build open source private clouds that run on any industry-standard server. 

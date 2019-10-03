@@ -7,6 +7,7 @@ path: oneview-global-dashboard-101-chock-full-of-useful-features
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1560890766707](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture1-1560890766706.png)
 
+
 To simplify the management of hybrid cloud infrastructures, the [HPE OneView](https://www.hpe.com/us/en/integrated-systems/software.html) Global Dashboard (OVGD) provides a unified view of the health and inventory of Hewlett Packard Enterprise (HPE) servers, profiles, enclosures, [HPE Synergy](https://www.hpe.com/us/en/integrated-systems/synergy.html) frames, and HPE 3PAR storage systems across data centers.
 
 HPE just released OVGD version 1.8, and I’m excited to tell you about what’s new. Can you believe it? This is our 9th release in less than three years! Our 10th is planned around OVGD’s 3rd birthday in October of this year. The team prides itself on having met every release on time. We are also happy with the features in each release of the product.
@@ -35,7 +36,10 @@ The OVGD team designs software that helps you tame your IT monster, but sometime
 
 ## Report Generator
 * We’ve got sixteen out-of-the-box reports that help you view your data center through different lenses. 
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1560890771858](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture2-1560890771858.png)
+
 * Reports have a lot of flexibility hidden underneath those ellipses you see on the screen.
     * __Manage Report Content,__ with the same familiar wrench icon, lets you choose which columns to display.
     * __Export__ allows you to export the data in CSV format. It also reflects any customizations you’ve made, such as search, sort, filter, and column customizations.

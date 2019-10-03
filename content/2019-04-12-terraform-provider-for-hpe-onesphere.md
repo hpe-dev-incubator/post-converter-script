@@ -59,7 +59,10 @@ provider "onesphere" {
   os_sslverify = true
 }
 ```
-Running terraform init will give the following output:![5bf2e1a0cd93d0796238ae01-blog-content-1555105142616](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture2-1555105142615.png)
+Running terraform init will give the following output:
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555105142616](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture2-1555105142615.png)
+
 For now, I am going to use four basic commands: plan, apply, show, and destroy. Similar to the init command, these can be executed using the HashiCorp Terraform CLI (terraform command).
 
 ## Steps
@@ -78,12 +81,21 @@ resource "onesphere_project" "terraform" {
 }
 ```
 Running terraform plan tells me that it will create the new project called “terraform” once I apply the changes.
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1555102758368](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/123-1555102758367.png)
+
 Other than the id field, there are no other <computed> fields from the pasted output. A computed field means that HashiCorp Terraform will produce a value once the plan is executed. You will see later how you can access those computed values directly rather than using terraform show.
 
 I next execute terraform apply. It will first print the plan and ask for confirmation.
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1555102800319](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/2222-1555102800318.png)
-When I approve, the resources will be created in the correct order. HashiCorp Terraform parallelizes the creation of independent resources.![5bf2e1a0cd93d0796238ae01-blog-content-1555102847372](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/ee-1555102847371.png)
+
+When I approve, the resources will be created in the correct order. HashiCorp Terraform parallelizes the creation of independent resources.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555102847372](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/ee-1555102847371.png)
+
 __Add Network:__
 
 As the network is already present in HPE OneSphere, I first need to import the network to bring it under HashiCorp Terraform management. The current version of terraform import can only import resources into the state. It does not generate a configuration. A future version will also generate the configuration. Because of this, prior to running terraform import, it is necessary to manually write a resource configuration block for the resource to which the imported object will be mapped.
@@ -98,7 +110,10 @@ resource "onesphere_network" "terraformnetwork" {
 ```
 
 Now, I will execute terraform import –provider=onesphere onesphere_network.terraformnetwork <Id.>  <Id.> is the network id.
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1555103112729](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/onw-1555103112728.png)
+
 The next step is to provide network access to the created project “Terraform” by performing “add” operation. 
 
 ```js
@@ -110,10 +125,22 @@ resource "onesphere_network" "projectnetwork" {
   operation         = "add"
   projectname       = "terraform"
 }
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1555103151459](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/code-1555103151458.png)
-Running terraform plan will tell me that it will update the network called “terraformnetwork” once we apply the changes.![5bf2e1a0cd93d0796238ae01-blog-content-1555103194531](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/dd-1555103194527.png)
-Once again, I execute terraform apply. Again, it will print the plan and ask for confirmation.![5bf2e1a0cd93d0796238ae01-blog-content-1555103235777](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/ww-1555103235776.png)
-When I approve, the network access will be provided to the project. ![5bf2e1a0cd93d0796238ae01-blog-content-1555103281033](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/33-1555103281032.png)
+
+Running terraform plan will tell me that it will update the network called “terraformnetwork” once we apply the changes.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103194531](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/dd-1555103194527.png)
+
+Once again, I execute terraform apply. Again, it will print the plan and ask for confirmation.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103235777](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/ww-1555103235776.png)
+
+When I approve, the network access will be provided to the project. 
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103281033](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/33-1555103281032.png)
+
 __Add Deployment__
 
 NOTE: The administrator needs to create a service group with services and expose it to the terraform project. Only those services can be deployed under the project.
@@ -135,9 +162,18 @@ resource "onesphere_deployment" "terraform" {
   networkname                   = "VMDeployment171"
 }
 
-Running terraform plan will tell me that it will create the new deployment called “Terraform-Deployment” once I apply the changes.![5bf2e1a0cd93d0796238ae01-blog-content-1555103395434](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/e1e-1555103395432.png)
-Once again, I must execute terraform apply. It will print the plan and ask for confirmation.![5bf2e1a0cd93d0796238ae01-blog-content-1555103435688](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture1sss-1555103435686.png)
-When I approve, the resources will be created in the correct order. Terraform parallelizes the creation of independent resources.![5bf2e1a0cd93d0796238ae01-blog-content-1555103480734](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture1ssq-1555103480733.png)
+Running terraform plan will tell me that it will create the new deployment called “Terraform-Deployment” once I apply the changes.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103395434](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/e1e-1555103395432.png)
+
+Once again, I must execute terraform apply. It will print the plan and ask for confirmation.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103435688](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture1sss-1555103435686.png)
+
+When I approve, the resources will be created in the correct order. Terraform parallelizes the creation of independent resources.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1555103480734](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture1ssq-1555103480733.png)
+
 The goal to create a virtual machine using HPE OneSphere provider was successful.
 
 ## Authentication

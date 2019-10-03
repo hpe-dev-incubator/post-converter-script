@@ -76,11 +76,20 @@ Ok, now we understand the verbs you can call against the API, the format we can 
 
 ## The API Reference
 
-Well before we can call this API we need to know what calls can be placed against HPE OneSphere. We need to know the list of API calls serviced by a given version of the HPE OneSphere product. There are several ways to provide this information, and one of them is using an OpenSource set of tools called Swagger ( [https://swagger.io](https://swagger.io)). Swagger uses HTML to present the different calls which can be used, together with what parameters needs to be provided and what status code and response is expected. The following example show the Swagger description of the REST API call for **GET /rest/status**.![API Reference for GET /rest/status](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/gettingstartedwithonesphereprogramming-picture1-1515084213559.jpg)
-The following capture the details for the **POST /rest/session** call:![gettingstartedwithonesphereprogramming picture2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/1/gettingstartedwithonesphereprogramming-picture2-1515084714119.jpg)
+Well before we can call this API we need to know what calls can be placed against HPE OneSphere. We need to know the list of API calls serviced by a given version of the HPE OneSphere product. There are several ways to provide this information, and one of them is using an OpenSource set of tools called Swagger ( [https://swagger.io](https://swagger.io)). Swagger uses HTML to present the different calls which can be used, together with what parameters needs to be provided and what status code and response is expected. The following example show the Swagger description of the REST API call for **GET /rest/status**.
+
+![API Reference for GET /rest/status](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/gettingstartedwithonesphereprogramming-picture1-1515084213559.jpg)
+
+The following capture the details for the **POST /rest/session** call:
+
+![gettingstartedwithonesphereprogramming picture2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/1/gettingstartedwithonesphereprogramming-picture2-1515084714119.jpg)
+
 Each HPE OneSphere comes with a complete API Reference which link is located in the **Learn** section of the GUI. Alternatively we also host a version of the API Reference at [https://developer.hpe.com/platform/hpe-onesphere/home](https://developer.hpe.com/platform/hpe-onesphere/home)## Pick a REST Tool
 
-So now, we have all the information we need to place our first HPE OneSphere API call to retrieve status. However, if you are new to REST programming, you might ask yourself, how do I place a REST call to an API without writing any code? There are a number of simple solutions for this. The one we recommend and will continue to use in these articles is called **Postman**. This is a free application from Postdot Technologies, and it is available for Windows, Mac, Linux and as a Chrome browser plugin. You can download and install it from [https://www.getpostman.com/postman](https://www.getpostman.com/postman)![geettingstartedwithonesphereprogramming picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/geettingstartedwithonesphereprogramming-picture3-1513678321128.jpg)
+So now, we have all the information we need to place our first HPE OneSphere API call to retrieve status. However, if you are new to REST programming, you might ask yourself, how do I place a REST call to an API without writing any code? There are a number of simple solutions for this. The one we recommend and will continue to use in these articles is called **Postman**. This is a free application from Postdot Technologies, and it is available for Windows, Mac, Linux and as a Chrome browser plugin. You can download and install it from [https://www.getpostman.com/postman](https://www.getpostman.com/postman)
+
+![geettingstartedwithonesphereprogramming picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/geettingstartedwithonesphereprogramming-picture3-1513678321128.jpg)
+
 ## Go for it!
 
 Assuming you now have Postman installed, let us fill out the following fields:
@@ -114,7 +123,10 @@ From this first call, it would seem like anyone can call the API and do anything
 | **Headers** | **Key** | **Value** | **Explanation** |
 | | Accept | application/json | This header tells the API about the format of data you expect in the response |
 
-If you send such a request with Postman, you shall get a status code of 401 (Unauthorized) and a body with more details about the problem. Obviously, we need a "valid token" to resubmit the request.![geettingstartedwithonesphereprogramming picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/geettingstartedwithonesphereprogramming-picture4-1513678330290.jpg)
+If you send such a request with Postman, you shall get a status code of 401 (Unauthorized) and a body with more details about the problem. Obviously, we need a "valid token" to resubmit the request.
+
+![geettingstartedwithonesphereprogramming picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/geettingstartedwithonesphereprogramming-picture4-1513678330290.jpg)
+
 ## Next step?
 
 In the next article, we will cover how to obtain a valid token to discover the rest of the API of HPE OneSphere.

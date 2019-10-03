@@ -6,6 +6,7 @@ tags: []
 path: deploy-a-full-stack-application-on-netlify-that-includes-a-cicd-pipeline
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1562947940344](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/use-case-graphic_continuous-delivery-1562947940343.png)
+
 Continuous Integration/Continuous Delivery & Deployment (CI/CD) is becoming a software development practice in which you build, test, integrate, deliver, and deploy software every time a developer or a development team merges code into a particular branch. Continuous integration, automated testing, and automated deployment capabilities allow software to be developed and deployed rapidly, reliably, and repeatedly with minimal human intervention.  This blog helps you to understand in detail how to enable a CI/CD pipeline for a full stack application. In this blog post, I will show you how to host a static website on Netlify, including how to set up continuous deployment.
 
 ## Project structure:
@@ -53,12 +54,30 @@ Each Netlify site belongs to a team, even if it’s only a team of one. Teams ca
 ## Step 2: Create new site from Git  
 
 
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1562946531886](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture2-1562946531885.png)
-> a) Connect your Git provider where the source code is hosted. Once you authorize Netlify to access the Git provider account, Netlify app is installed in your GH profile to allow access specifically to a repo or all repos hosted under the Git account. ![5bf2e1a0cd93d0796238ae01-blog-content-1562946579015](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture3-1562946579014.png)
-> b)	__Pick__ a repository or __Select All__ repositories to avoid doing this step for every repo.![5bf2e1a0cd93d0796238ae01-blog-content-1562946635494](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture5-1562946635493.png)
- >  c)	This is where you provide all of the deployment settings. Your build settings should match those found in the build directory provided in the netlify.toml file that was added at the beginning of the exercise.![5bf2e1a0cd93d0796238ae01-blog-content-1562946692252](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture6-1562946692251.png)
-Click on the `Deploy site` button and watch the deployment progress in the CLI provided.![5bf2e1a0cd93d0796238ae01-blog-content-1562946739479](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture7-1562946739478.png)
+
+> a) Connect your Git provider where the source code is hosted. Once you authorize Netlify to access the Git provider account, Netlify app is installed in your GH profile to allow access specifically to a repo or all repos hosted under the Git account. 
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1562946579015](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture3-1562946579014.png)
+
+> b)	__Pick__ a repository or __Select All__ repositories to avoid doing this step for every repo.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1562946635494](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture5-1562946635493.png)
+
+ >  c)	This is where you provide all of the deployment settings. Your build settings should match those found in the build directory provided in the netlify.toml file that was added at the beginning of the exercise.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1562946692252](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture6-1562946692251.png)
+
+Click on the `Deploy site` button and watch the deployment progress in the CLI provided.
+
+![5bf2e1a0cd93d0796238ae01-blog-content-1562946739479](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture7-1562946739478.png)
+
+
+
 ![5bf2e1a0cd93d0796238ae01-blog-content-1562946768653](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture8-1562946768653.png)
+
 At this point, you can preview the deployment for this specific build or go back to the home page on app.netlify.com site to find the default url allocated on the Netlify domain. 
 
 The URL should look like this `https://something-abc-38642d.netlify.com`

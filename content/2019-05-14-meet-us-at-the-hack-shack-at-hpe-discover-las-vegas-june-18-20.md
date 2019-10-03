@@ -6,6 +6,7 @@ tags: ["HPEDiscover","HackShack"]
 path: meet-us-at-the-hack-shack-at-hpe-discover-las-vegas-june-18-20
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1557861662231](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/img_0246-1557861662220.jpg)
+
 HPE DEV is gearing up for Hewlett Packard Enterprise’s (HPE) premier event, [HPE Discover,](https://www.hpe.com/events/discover/) to be held June 18-20, 2019 in Las Vegas. Expect three action-packed days filled with talks, workshops, and events designed to help your business become more agile. Software developers and designers will want to block off a good amount of time to spend at the HPE DEV & Design’s Hack Shack, which offers opportunities for hands-on learning and a place to become more engaged with the HPE Developer and Design Community. There, you’ll learn how HPE supports developers and designers in creating innovative solutions to complex problems, collaborating with them using open source software, “design thinking”, DevOps and ITOps tools. 
 
 The Hack Shack features two types of interactive activities: Workshops and Challenges. In the Workshops, you’ll get a chance to see innovative technologies in action. There will also be several design-related workshops, including some focused on [Grommet](https://v2.grommet.io/) – an open source user interface (UI) toolkit designed by HPE. In the Challenges, which run from show open till show close, we encourage attendees to apply their skills and build out their application ideas while competing for cool prizes. 

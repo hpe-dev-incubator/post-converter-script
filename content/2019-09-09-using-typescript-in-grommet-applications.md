@@ -6,6 +6,7 @@ tags: ["Grommet"]
 path: using-typescript-in-grommet-applications
 ---
 ![typescriptimage](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/typescriptimage-1568052628959.jpeg)
+
 Recently, I spent time learning TypeScript, a typed superset of JavaScript that offers optional static type-checking along with the latest ECMAScript features. TypeScript can be pretty painful to wrap your head around, given the breadth of its capabilities. But I found that TypeScript has many benefits. For instance, declaring types as you write your application, whether they are a number, string, array, or function, can save developers time by catching problems early in the development process. And, if you are maintaining a project with others using TypeScript, it will cut down on runtime because you are able to surface bugs during compilation. In this tutorial, I will introduce you to how to get started with TypeScript within the confines of a React and Grommet project. 
 
 ## Step 1
@@ -32,7 +33,10 @@ npm install –save typescript @types/node @types/react @types/react-dom @types/
 Once you’ve added TypeScript to the Grommet application, you can pick up where Ian talks about the App.js in regards to the Heading component. 
 
 As you go through your files, change the App.js to App.tsx. This will trigger the use of TypeScript.
+
+
 ![screen shot 2019 09 09 at 12.22.30 pm](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/screen-shot-2019-09-09-at-122230-pm-1568053417737.png)
+
 Following my own suggestion for this example, I will start with the Heading component that was used in [Ian’s blog:](https://developer.hpe.com/blog/using-your-first-grommet-component-with-create-react-app)
 
 ```
@@ -54,12 +58,21 @@ export default App;
 As shown in Ian’s blog, each component has its own props. In the Grommet project, these props have been declared in their own TypeScript files to define the types that should be accepted by each prop. 
 
 Let’s try and break a few things to make sure that the types are being checked correctly. The Heading component has various props you can manipulate, including things like size, color, level, and margin. You can change these props to fit your specific design requirements. In this example, we will change the level prop of the Heading component. It accepts a number from 1-6 or a string containing a number 1-6. If we were to use a string that passed in the word “small”, this should give us a TypeScript error.  
+
+
 ![screen shot 2019 09 09 at 12.16.50 pm](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/screen-shot-2019-09-09-at-121650-pm-1568053104287.png)
+
 The great thing about TypeScript is that when you have an error, you can hover over it and it will explain the type options that can be accepted, as well as what was given. In this example, we received an error that stated 
 
+
+
 ![screen shot 2019 09 12 at 9.35.44 am](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/screen-shot-2019-09-12-at-93544-am-1568737040433.png)
+
 As you can see, the error was very clear in stating what prop types were expected and what was given. This shows what broke the project, so the level prop can be changed back to “1”. Once this is changed, you will see the error disappear without having to debug the whole application!  
+
+
 ![screen shot 2019 09 09 at 12.27.38 pm](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/screen-shot-2019-09-09-at-122738-pm-1568053721635.png)
+
 See what happens after I’ve made the change?
 Yay! The error has disappeared!
 

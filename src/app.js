@@ -51,7 +51,12 @@ path: ${slug}
           currBlock.image.title ||
           currBlock.content ||
           'blog image';
-        mdString = `${mdString}![${alt}](https://hpe-developer-portal.s3.amazonaws.com${currBlock.image.path})\n`;
+        const isFirstBlock = i === 0 && j === 0;
+        mdString = `${mdString}${
+          !isFirstBlock ? '\n\n' : ''
+        }![${alt}](https://hpe-developer-portal.s3.amazonaws.com${
+          currBlock.image.path
+        })\n\n`;
       }
     }
   }

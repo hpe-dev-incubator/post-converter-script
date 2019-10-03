@@ -28,7 +28,10 @@ path: hpe-onesphere-deep-dive-on-azure-support
 
 ** F.**  Select the subscription to be onboarded.
 
-#### Below figure shows the Addition of Azure billing account from OneSphere. This will be achieved by clicking on Settings from OneSphere user Interface and selecting Public Billing Accounts. Provide Name, Active Directory Name, Enrollment Account Number and Enterprise Admin Key.![azure_billing1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_billing1-1533012455985.png)
+#### Below figure shows the Addition of Azure billing account from OneSphere. This will be achieved by clicking on Settings from OneSphere user Interface and selecting Public Billing Accounts. Provide Name, Active Directory Name, Enrollment Account Number and Enterprise Admin Key.
+
+![azure_billing1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_billing1-1533012455985.png)
+
 #### Below rest API explains the onboarding  of Azure billing account from OneSphere.  Values for the following fields needs to be provided for the rest API:  Customer-name, directoryUri, enrollmentNumber, apiAccessKey and name### Request URL :
 ```
 curl -v -L -X POST -H "Authorization: Bearer <token>" -H "Content-Type: application/json"  https://<customer-name>/rest/billing-accounts -d {"directoryUri":"hpe.onmicrosoft.com","enrollmentNumber":"5053985","apiAccessKey":"*******","name":"EA","providerTypeUri":"/rest/provider-types/azure"}
@@ -47,9 +50,18 @@ curl -v -L -X POST -H "Authorization: Bearer <token>" -H "Content-Type: applicat
   "created": "2018-07-31T15:18:29.358147018Z",
   "modified": "2018-07-31T15:18:29.358147018Z"
 }
-```#### Below, the figure shows the creation of projects and how to associate public account to it. From HPE OneSphere, one needs to click on Projects and select '+' sign for creating project. Once the project is created, click on Project name and select 'Add Public Accounts' option. In that, select 'Microsoft Azure' and select the 'Azure billing account' and 'Azure Directory URI' where subscriptions are associated.![azure_provider1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider1-1533015040242.png)
-#### Below, the figure shows the consent form to allow the HPE OneSphere app to use the Azure data. Once you click on Accept, it will take you to the subscription selection page.![azure_provider2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider2-1533015059201.png)
-#### The below figure shows the Select subscription screen where all the Azure subscription are listed. The user has to select the appropriate subscriptions![azure_provider3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider3-1533015113947.png)
+```#### Below, the figure shows the creation of projects and how to associate public account to it. From HPE OneSphere, one needs to click on Projects and select '+' sign for creating project. Once the project is created, click on Project name and select 'Add Public Accounts' option. In that, select 'Microsoft Azure' and select the 'Azure billing account' and 'Azure Directory URI' where subscriptions are associated.
+
+![azure_provider1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider1-1533015040242.png)
+
+#### Below, the figure shows the consent form to allow the HPE OneSphere app to use the Azure data. Once you click on Accept, it will take you to the subscription selection page.
+
+![azure_provider2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider2-1533015059201.png)
+
+#### The below figure shows the Select subscription screen where all the Azure subscription are listed. The user has to select the appropriate subscriptions
+
+![azure_provider3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_provider3-1533015113947.png)
+
 #### Below, the rest API call is used to get the list of subscriptions that are available for the account admin who is logged in.### Request URL :
 ```
 curl -v -L -X GET -H "Authorization: Bearer <token>" -H "Content-Type: application/json" https://<customer-name>/rest/onboarding/azure/subscriptions/71ff6703-72d9-412f-9591-c8acd9fb5dbf?directoryUri=1sqe.onmicrosoft.com&location=https%3A%2F%2Fteam-tiger1.test.hpedevops.net%2Fproject%2Fsubscriptions%3Fcode%3DAQABAAIAAADX8GCi6Js6SK82TsD2Pb7rb9ruNBNFsX1_curhHyaTMTJVayB-LRLAJ40x1n2zmJvJmOpnBV7ZeyP3OQ2nk6EJPU1R6OrcU4M6mYgLfzIc2f--mXGDIzCyWMt7SKEPO5L5q8EtxLxWYD0Cxnd1J7JfBNb1liwgirMro08_IlF_zOk6J4keQb89zv030_FDcDQbcqqxNheIDLNu-xEze7rPuTxo198VX6rmmEjE_s9eU1PFGYvnihq3AUqDE3EkAPAjb-mwvfYXUu0LXx1kH05m59Q6dZ9yoVwAM1tMhreGccdB8_uBzY3I768LtSplnLQSlxIdKtgEN0iciTxEF67j7akUfpRyM260BIbteGyKljsO-IyYOo7kaE7VGo4bQXZowDqAv5XrSp-6qUtv4Gl20w5b1q2rgT_u7X961x9kRFnULvPxSS4IO06eEtKjSqWGxssLWtk0SWACrJxOFHfYshve86-NXLlOtwUaecNxYFDB6vTNmZ7VO5HeV_9b-xT2iQ66p4MDRFwGWXj8m0Tvxx6wT07FkaFqjzVLkZkPkSB6vCxevViH9noJ2wLYYF6L2KmL9n5nsXw5BELpYlkT6M91ZTX95uzKwjNB9iZsiyAA%26state%3D%257b%2522projectUri%2522%253a%2522%252frest%252fprojects%252fd0123c1d19274371b5c6d6edc24b74d2%2522%252c%2522billingAccountUri%2522%253a%2522%252frest%252fbilling-accounts%252f81ce737f-31fd-47a1-8414-839e415e9896%2522%252c%2522directoryUri%2522%253a%25221sqe.onmicrosoft.com%2522%257d%26session_state%3Df65f2fb0-32d7-49f8-9332-3e439eec480b
@@ -126,7 +138,10 @@ curl -v -L -X POST -H "Authorization: Bearer <token>" -H "Content-Type: applicat
     }
   ]
 }
-```# Azure Monitoring#### Monitoring of the Azure providers in HPE OneSphere provides the score for the Utilization, Availability, Performance and Rating.#### The below figure shows the Score of the Rating, Utilization, Availability and Performance for the onboarded Azure subscription.![azure_monitoring](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_monitoring-1533015148287.png)
+```# Azure Monitoring#### Monitoring of the Azure providers in HPE OneSphere provides the score for the Utilization, Availability, Performance and Rating.#### The below figure shows the Score of the Rating, Utilization, Availability and Performance for the onboarded Azure subscription.
+
+![azure_monitoring](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_monitoring-1533015148287.png)
+
 #### Below, the rest API shows the scores of the Azure subscription based on Rating, Utilization, Availability and Performance.### Request URL :
 ```
 /rest/metrics?resourceUri=%2Frest%2Fprovider-types%2Fazure&name=score.overall&name=score.availability&name=score.utilization&name=score.performance&period=day&periodCount=30&periodStart=2018-06-28T00%3A00%3A00Z
@@ -371,8 +386,14 @@ curl -v -L -X POST -H "Authorization: Bearer <token>" -H "Content-Type: applicat
     }
   ]
 }
-```# Azure Costing#### Costing in HPE OneSphere shows the billing account costs and the costing based on Providers and Projects.#### Below figure shows the cost of the Provider type in Donut graph and the total cost and managed costs of the Azure provider-type. More interpretations on the various costs can be understood from the link given below at the end of this blog named Interpretation of costs.![azure_cost_new1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_cost_new1-1533016011728.png)
-#### The below figure shows the Project level cost where the Azure provider is associated and the provider level costs. More interpretations on the various costs can be understood from the link given below at the end of this blog named Interpretation of costs.![azure_cost_new2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_cost_new2-1533016027827.png)
+```# Azure Costing#### Costing in HPE OneSphere shows the billing account costs and the costing based on Providers and Projects.#### Below figure shows the cost of the Provider type in Donut graph and the total cost and managed costs of the Azure provider-type. More interpretations on the various costs can be understood from the link given below at the end of this blog named Interpretation of costs.
+
+![azure_cost_new1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_cost_new1-1533016011728.png)
+
+#### The below figure shows the Project level cost where the Azure provider is associated and the provider level costs. More interpretations on the various costs can be understood from the link given below at the end of this blog named Interpretation of costs.
+
+![azure_cost_new2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/7/azure_cost_new2-1533016027827.png)
+
 #### Below, the rest API shows the usage costs for the Azure provider which is associated with an HPE OneSphere project.### Request URL :
 ```
 /rest/metrics?name=cost.usage&period=month&periodStart=2018-08-01T00%3A00%3A00Z&periodCount=-2&category=projects&query=providerUri+EQ+%2Frest%2Fproviders%2Fea1964af-6e9f-4164-b169-6a0a8cf3dd1f&view=full

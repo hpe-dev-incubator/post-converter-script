@@ -6,6 +6,7 @@ tags: []
 path: hpe-dev-and-design-gear-up-for-august-conferences-jsconf-and-react-rally
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1564504318352](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture1-1564504318351.png)
+
 HPE DEV and Design engineers are looking forward to attending two upcoming conferences – [JSConf](https://2019.jsconf.us/)  and [React Rally.](https://www.reactrally.com/) HPE Chief Designer, Chris Carlozzi, as well as UX Designer/Developer, Eric Soderberg, and HPE Senior Open Source Developer, Shimrit Yacobi, will be participating in panel discussions at JSConf. HPE DEV lead, Alex Mejias and members of his software development team will staff the HPE DEV area at React Rally.
 
 ## JSConf US 2019

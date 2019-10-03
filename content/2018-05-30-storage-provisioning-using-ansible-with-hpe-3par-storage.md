@@ -170,13 +170,22 @@ First step to using the storage module, is to download it from Github. As of Ans
 git clone https://github.com/HewlettPackard/hpe3par_ansible_module
 ```
 
-Once we have it downloaded, you can look at the various items included with the Module.![image1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image1-1528126916512.png)
+Once we have it downloaded, you can look at the various items included with the Module.
+
+![image1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image1-1528126916512.png)
+
 We are most interested in the Modules and playbooks. The Modules folder contains the code (written in Python) behind the playbooks and these specific modules do all of the work on the 3PAR so we don’t have to write lengthy and complex REST calls like in the beginning example. They also provide HPE 3PAR resources and actions that we can then use within our playbooks like create volumes, modify 3PAR hosts, or delete hostsets as an example. We don’t have to modify anything here and they are available when we create our playbooks.
 
-Now let's look at the playbooks. There is a pretty large list of available playbooks here.![image2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image2-1528127089601.png)
+Now let's look at the playbooks. There is a pretty large list of available playbooks here.
+
+![image2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image2-1528127089601.png)
+
 The name of the playbooks correlates to the actions and resources that you will be working with. So for example if we want to create a **_snapshot_**, we would be working with the **snapshot_playbook.yml** or if we want to manage **_volumes_**, we would be using the **volume_playbook.yml**.
 
-Let’s look at the volume playbook,![image3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image3-1528127229536.png)
+Let’s look at the volume playbook,
+
+![image3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image3-1528127229536.png)
+
 Variables within **YAML** are defined with curly brackets: `{{ variable }}`. 
 
 Second, **_state_**.
@@ -327,8 +336,14 @@ Now let’s run the playbook.
 ansible-playbook demo_playbook.yml
 ```
 
-You should see the following output:![image4 1528127766708_80](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image4-1528127766708_80-1528129228459.png)
-If you look at your HPE 3PAR array, you will now see it your new volume.![image5](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image5-1528128461213.png)
+You should see the following output:
+
+![image4 1528127766708_80](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image4-1528127766708_80-1528129228459.png)
+
+If you look at your HPE 3PAR array, you will now see it your new volume.
+
+![image5](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/image5-1528128461213.png)
+
 Congratulations on creating a playbook using the HPE 3PAR Storage modules for Ansible. 
 
 The HPE 3PAR Storage modules make the job much simpler as well as you have greater flexibility in integrating HPE 3PAR into your DevOps and Operation team workflows. Again looking back at our original playbook example, it took 57 lines of code to simply read the volumes from the HPE 3PAR. We were able to create and then export the volume to a server in 37.

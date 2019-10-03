@@ -6,6 +6,7 @@ tags: []
 path: from-developer-to-manager-to-freight-captain
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1556306907820](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/container-1638068_1920-1556306907818.jpg)
+
 You’re a developer. You spend the majority of your day clacking away at your keyboard outputting lines and lines of code and working hard to vet your solutions. At the end of the day, you check your code in and mark issues as closed. Each day, you deliver your daily dose of syntactic morsels for everyone to admire.
 
 Because of the hard work you’ve put in, you earn the respect of others and move up to a technical lead position. You now spend the majority of your day architecting delightfully elegant solutions for technically complex problems. You mentor your team and keep them technically on-point while keeping an eye out for technical soundness. You pick up on the concept of delegation and really start to learn what it takes to be a leader. When you wake up in the morning, you know your team is on track with well-crafted and thoughtful solutions. When your day comes winding to an end, you feel satisfied knowing all of the project issues your team has closed. As you review the new and exciting features you’ve developed together, you feel pride in your team. Life is good!

@@ -6,6 +6,7 @@ tags: ["Grommet"]
 path: my-journey-from-student-to-hpe-full-stack-developer
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1558709131030](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/unsquished-brittany-grad-picture-1558709131030.jpg)
+
 This time last year, I was walking across the stage to receive my diploma. In that moment, I had a million thoughts racing through my head. For example, what is the next step in my journey? What kind of position do I see myself attaining in the next few years? And, most importantly, how do I not fall off this stage in front of all these people! For the past five years, I had a routine: go to class, work, and then study or work on projects/homework. The routine as I knew it would come to an end, and I had no idea what my next steps were going to be. Just like any other new graduate, I was concerned with the uncertainty of landing a job and whether or not those long years spent getting my undergrad were going to pay off. 
 
 ## Landing my first position

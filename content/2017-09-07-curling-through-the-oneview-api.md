@@ -57,7 +57,10 @@ which will retrieve the version of the API.
 ```postscript
 curl -i -k -H "accept: application/json" \\
 -X GET https://213.30.139.22:37441/rest/version
-```![Curl command to retrieve the version of the  API.](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-1-1504806712277.png)
+```
+
+![Curl command to retrieve the version of the  API.](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-1-1504806712277.png)
+
 # Parsing JSON 
 
 We can see in the last line of the above example that the response is
@@ -72,14 +75,20 @@ Once installed you can use it like this:
 ```postscript
 curl -k -H "accept: application/json" \\
 -X GET https://213.30.139.22:37441/rest/version | jq -r "."
-```![command line JSON processor to parse the JSON](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-2-1504806725594.png)
+```
+
+![command line JSON processor to parse the JSON](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-2-1504806725594.png)
+
 This will just pretty print the JSON response, but you can also extract
 field, for example to retrieve the currentVersion.
 
 ```postscript
 curl -k -H "accept: application/json" \\
 -X GET https://213.30.139.22:37441/rest/version | jq -r ".currentVersion"
-```![Retrieve API version using command line JSON parser](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-3-1504806732409.png)
+```
+
+![Retrieve API version using command line JSON parser](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-3-1504806732409.png)
+
 So let us pretend would like to capture the currentVersion in a variable
 within a shell script, we could do the following:
 
@@ -90,7 +99,10 @@ currentVersion=$(curl -k -H "accept: application/json" -X GET
 https://213.30.139.22:37441/rest/version | jq -r ".currentVersion")
 
 echo $currentVersion
-```![retrieve current version of API using open source jq tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-4-1504806739646.png)
+```
+
+![retrieve current version of API using open source jq tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-4-1504806739646.png)
+
 # Getting a Session token
 
 Let us now apply this technique to login to our HPE OneView Appliance
@@ -103,7 +115,10 @@ curl -k -H "accept: application/json" -H "content-type:
 application/json" \\
 -d '{"userName":"Administrator","password":"password"}' \\
 -X POST https://213.30.139.22:37441/rest/login-sessions | jq -r "."
-```![Getting a Session token using POST Curl command](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-5-1504806745891.png)
+```
+
+![Getting a Session token using POST Curl command](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-5-1504806745891.png)
+
 We can then, extract the sessionID in a variable using the following
 syntax:
 
@@ -114,7 +129,10 @@ application/json" \\
 -X POST https://213.30.139.22:37441/rest/login-sessions | jq -r ".sessionID")
 
 echo $sessionID
-```![extract the sessionID in a variable](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-6-1504806754438.png)
+```
+
+![extract the sessionID in a variable](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-6-1504806754438.png)
+
 # Putting it all together
 
 We have now retrieved the API Version (currentVersion) and a login
@@ -128,7 +146,10 @@ application/json" \\
 -H "x-api-version: $currentVersion" -H "auth: $sessionID" \\
 -X GET https://213.30.139.22:37441/rest/server-hardware \\
 | jq -r ".members\[\].model"
-```![enumerate the models of the servers managed in this environment](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-7-1504806761092.png)
+```
+
+![enumerate the models of the servers managed in this environment](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-7-1504806761092.png)
+
 # cURL on Linux and Windows
 
 But what about Windows? Some of you might ask. The good news is that
@@ -156,7 +177,10 @@ application/json" -X POST
 https://213.30.139.22:37441/rest/login-sessions -d
 "{\\"userName\\":\\"Administrator\\",\\"password\\":\\"password\\"}" |
 jq -r ".sessionID"
-```![Curl command to retrieve a sessionID using jq tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-8-1504806767303.png)
+```
+
+![Curl command to retrieve a sessionID using jq tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-8-1504806767303.png)
+
 However, if you really need to store it into a variable in Windows
 command interpreter, things get a little more complicated:
 
@@ -166,16 +190,25 @@ https://213.30.139.22:37441/rest/login-sessions -d
 "{\\"userName\\":\\"Administrator\\",\\"password\\":\\"password\\"}" ^|
 jq -r ".sessionID"') do @set sessionID=%a
 
-echo %sessionID%![store session id into a variable in Windows command interpreter](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-9-1504806773156.png)
+echo %sessionID%
+
+![store session id into a variable in Windows command interpreter](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-9-1504806773156.png)
+
 # And the last good news is…
 
 So I asked early on, how do these calls translate in cURL? Here is the
 last piece of good news: POSTman can help you with that. Imagine you
 have been experimenting with a GET in POSTman, and you would like to run
-the same GET from cURL in a script![POSTman can help to generate Curl code](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-10-1504806780133.png)
+the same GET from cURL in a script
+
+![POSTman can help to generate Curl code](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-10-1504806780133.png)
+
 You can use the **Generate Code** button in the upper right corner and
 select cURL from the drop down to get the right string ready to paste in
-your own script.![Generated Curl code from POSTman REST tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-11-1504806788067.png)
+your own script.
+
+![Generated Curl code from POSTman REST tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/curl-11-1504806788067.png)
+
 # What is next?
 
 Scripting with cURL might solve a number of use cases, and is somewhat

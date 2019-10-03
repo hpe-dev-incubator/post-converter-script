@@ -6,6 +6,7 @@ tags: []
 path: solving-enterprise-devops-and-front-end-challenges-with-open-source-at-o
 ---
 ![5bf2e1a0cd93d0796238ae01-blog-content-1560460835964](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture1-1560460835957.png)
+
 For over 20 years, the [O’Reilly Open Source Software Conference (OSCON)](https://conferences.oreilly.com/oscon/oscon-or/public/content/about) has been the focal point of the open source movement, earning a reputation as the destination for all things free and open. OSCON welcomes anyone who’s passionate about open source; from software developers, designers, and architects, to activists, hackers, and geeks. This year the event will take place in Portland, Oregon, from July 15 – 19, 2019.
 
 Some may be surprised to see Hewlett Packard Enterprise (HPE) at an event like OSCON, but those “in the know” will recognize HPE as a leading innovator who has a lot to offer open source software development and design teams. Attendees will get a chance to see how an HPE-developed, easy-to-use open source component library, like [Grommet,](https://v2.grommet.io/) can be used to create responsive, mobile-first projects.

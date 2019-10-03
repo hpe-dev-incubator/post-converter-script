@@ -16,15 +16,36 @@ After a firmware upgrade with the latest Service Pack for ProLiant (SPP), I boot
 The servers were ready to join the Windows domain after they were rebooted to apply the new configuration.
 
 Next, I installed Hyper-V role, then failover Clustering and the Multipath IO feature, after which I rebooted the systems again. 
+
+
 ![picture1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture1-1565019791083.png)
+
+
+
 ![picture2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture2-1565019843536.png)
-The shared volumes were created to be added in the failover cluster from disks that were part of the Cluster Shared Volume (CVS).![picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture3-1565019886020.png)
-As you can see, the Hyper-V Failover Cluster can now be validated.![picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture4-1565019943404.png)
+
+The shared volumes were created to be added in the failover cluster from disks that were part of the Cluster Shared Volume (CVS).
+
+![picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture3-1565019886020.png)
+
+As you can see, the Hyper-V Failover Cluster can now be validated.
+
+![picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture4-1565019943404.png)
+
 
 I then installed the prerequisites for SCVMM including SQL Server 2016, Windows ADK (Assessment and Deployment Kit), and Windows PE (Pre-installation Environment), as well as created specific users and groups in the domain. Note that you must run the SCVMM Setup as an administrator. After answering a few questions, I Iaunched the application and connected to the Hyper-V Cluster.
+
+
 ![picture5](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture5-1565020033667.png)
+
+
+
 ![picture6](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture6-1565020039994.png)
+
+
+
 ![picture7](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture7-1565020045576.png)
+
 For more detailed information, check out the following:
 
 * [Prestage cluster computer objects in Active Directory Domain Services (ASDS)](https://docs.microsoft.com/en-us/windows-server/failover-clustering/prestage-cluster-adds)     

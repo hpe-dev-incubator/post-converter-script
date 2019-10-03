@@ -6,6 +6,7 @@ tags: []
 path: so-you-know-how-to-code-is-that-enough
 ---
 ![picture1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture1-1567530751772.png)
+
 You've probably spent considerable time mastering a programming language. You may even be an expert in something like JavaScript, CSS, Python or perhaps C/C++.  You've written so many lines of code you cannot remember all the projects. And you know you can probably solve just about any problem using your favorite language. That's awesome!  
 
 But what happens when that language becomes less relevant and is replaced by something else? Technology changes faster than almost anything else (well, maybe not as fast as that green light you never seem to catch in traffic). As a developer, you are constantly challenged to learn the latest programming language or tool that will give you that extra edge to stand out from the rest of the pack. And, despite your best efforts, that's not always going to happen. But you can do plenty of other things to stay ahead in this fast-paced environment. 
