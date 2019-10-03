@@ -5,7 +5,7 @@ author: Pramod Sareddy
 tags: []
 path: how-to-register-a-grommet-osb-broker-in-a-kubernetes-service-catalog
 ---
-![registering a broker](/uploads/media/2019/8/registering-a-broker-1566920379874.png)
+![registering a broker](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/registering-a-broker-1566920379874.png)
 In my previous article, [Using Open Service Broker as a Quick and Easy Way to Offer Everything as-a-Service,](https://developer.hpe.com/blog/using-open-service-broker-as-a-quick-and-easy-way-to-offer-everything-as) we examined what a Open Service Broker (OSB) API is and how it can be used to expose the Grommet development environment as-a-Service. Now, I would like to show you how to register and consume services offered by the Grommet OSB Broker in a Kubernetes Service Catalog to provision, bind, unbind, and deprovision a Grommet Dev Instance. 
 
 This tutorial will be helpful for developers in many companies who today deploy Kubernetes clusters to ensure scalability for their applications. Applications running inside Kubernetes clusters may need  access  to 3rd party services, like databases or additional storage, and you need to be able to provide that service to app developers as part of the Kubernetes Service Catalog. One way of exposing a service is to use OSB. Once you register your OSB inside the Kubernetes Service Catalog, you can see the service, and then you can provision and bind the service to your application. 
@@ -15,15 +15,15 @@ This tutorial assumes that you've installed a Service Catalog onto your Kubernet
 All commands shown assume that you're operating out of the root of this repository.
 
 In the figure below, you can see the overall architecture setup of the Kubernetes Service Catalog running on premise interacting with Grommet OSB broker running in AWS cloud to provision, bind, and deprovision a Grommet Dev Instance in the cloud.
-![picture1](/uploads/media/2019/8/picture1-1566414261415.png)
+![picture1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture1-1566414261415.png)
 In this architecture, the Kubernetes Service Catalog establishes an association with the Grommet OSB broker by sending a GET request to the /v2/catalog endpoint, which then responds with a 200 OK and a body containing all the information about the services it offers. Kubernetes stores and exposes these services to consumers via the Kubernetes Service Catalog. Cloud operators will instantiate the service by sending a PUT request to the /v2/service_instances/:service_id end point. The broker will do the actual provisioning of the service instance. Let’s discuss each of these components individually.
 <br/>
 ## Kubernetes Internal Architecture
 
 To start, I will briefly cover the basics of how Kubernetes works internally. There is an API server that listens to user requests. Users perform most actions by declaratively describing Kubernetes resources in yaml files that get written through to Etcd, shared key-value store. In my example here, a user is declaring some object Foo, which creates a record in the Etcd.
-![picture2](/uploads/media/2019/8/picture2-1566414265789.png)
-As you can see, we have a Foo Controller, which is watching the shared Etcd through the API Server for any changes in Foo objects. Now that we just created a new one, our Foo Controller sees the change and begins taking actions to implement this change of state.![picture3](/uploads/media/2019/8/picture3-1566414269747.png)
-This results in ithe Foo controller creating a new Foo object. Depending on what Foo is, this action could be doing something directly or it could be sending a command to another Kubernetes component. Nevertheless, the general principle remains the same. This particular example was for some object-type Foo, but there are many resources in Kubernetes and, correspondingly, many API servers and controllers.![picture4](/uploads/media/2019/8/picture4-1566414273123.png)
+![picture2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture2-1566414265789.png)
+As you can see, we have a Foo Controller, which is watching the shared Etcd through the API Server for any changes in Foo objects. Now that we just created a new one, our Foo Controller sees the change and begins taking actions to implement this change of state.![picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture3-1566414269747.png)
+This results in ithe Foo controller creating a new Foo object. Depending on what Foo is, this action could be doing something directly or it could be sending a command to another Kubernetes component. Nevertheless, the general principle remains the same. This particular example was for some object-type Foo, but there are many resources in Kubernetes and, correspondingly, many API servers and controllers.![picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture4-1566414273123.png)
 ## Kubernetes Service Catalog
 
 A Kubernetes Service Catalog is an extension API that enables applications running in Kubernetes clusters to easily use externally managed software offerings, such as a datastore service offered by a cloud provider or a standalone VM, like a Grommet Dev Environment as-a-Service.
@@ -33,7 +33,7 @@ The service catalog provides a way to list, provision, and bind with externally 
 With that in mind, here is an overview of what the service catalog looks like. It’s a custom Kube API server and controller that maintains the state for five new resource types that correspond to their equivalents from the [OSB API.](https://www.openservicebrokerapi.org) The controller implements the client side of the OSB API, allowing it to query service brokers for their catalogs, and to manipulate them so it can provision and maintain services. It also makes use of a native Kubernetes resource, Secrets, to inject credentials for service bindings into running Pods, but more on that in a moment.
 
 Everything I mentioned about the OSB architecture in my [previous blog,](https://developer.hpe.com/blog/using-open-service-broker-as-a-quick-and-easy-way-to-offer-everything-as) is contained in this interface between the controller and the service brokers. App developers don’t have to be aware of it, and they can continue to use Kubernetes the same as before, issuing normal CRUD commands through the API service.
-![picture5](/uploads/media/2019/8/picture5-1566414276654.png)
+![picture5](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture5-1566414276654.png)
 Once again, this tutorial assumes that you've installed a Service Catalog onto your Kubernetes cluster. If you haven't, please see the [installation instructions.](https://github.com/kubernetes-sigs/service-catalog/blob/master/docs/install.md) Optionally, you may install the Service Catalog CLI, svcat. Examples for both svcat and kubectl are provided.
 
 All commands in this post assume that you're operating out of the root of this repository.
@@ -45,7 +45,7 @@ In the real world, the broker could be deployed within our cluster, next to our 
 
 ## Step 2 - Register Grommet Broker
 In this second step, the, cluster operator creates a ClusterServiceBroker resource within the servicecatalog.k8.io group. This resource contains the URL and connection details necessary to access a service broker endpoint. The service catalog control manager triggers a call to the external service broker for a list of all available services. The service broker returns a list of available managed services and a list of service plans, which are cached locally as ClusterServiceClass and ClusterServicePlan resources respectively. A cluster operator can then get the list of available managed services and service plans using kubectl get clusterservicecalassess or clusterserviceplans commands.
-![picture6](/uploads/media/2019/8/picture6-1566414280554.png)
+![picture6](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture6-1566414280554.png)
 Because we haven't created any resources in the service-catalog API server yet, querying the service catalog returns an empty list of resources:
 
 ```bash
@@ -229,7 +229,7 @@ spec:
 Here, the cluster operator can instantiate the provisioning of a new instance by creating a ServiceInstance resource within the servicecatalog.k8.io group. When the ServiceInstance resource is created, the service catalog control manager initiates a call to the external service broker to provision an instance of the service.
 
 The service broker creates a new instance of the managed service and returns an HTTP response. A cluster operator can then check the status of the instance to see if it is ready.
-![picture7](/uploads/media/2019/8/picture7-1566414285460.png)
+![picture7](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture7-1566414285460.png)
 Now that a ClusterServiceClass named grommet exists within our cluster's service catalog, we can create a ServiceInstance that points to it.
 
 Unlike ClusterServiceBroker and ClusterServiceClass resources, ServiceInstance resources must be namespaced. Create a namespace with the following command:
@@ -359,7 +359,7 @@ After the ServiceBinding is created, the service catalog makes a call to the ext
 The service broker enables the application permissions/roles for the appropriate service account.
 
 The service broker returns the information necessary to connect and access the managed service instance. This is provider and service-specific so the information returned may differ between service providers and their managed services. In our case, the Grommet broker returns the Grommet Dev Instance access credentials.
-![picture8](/uploads/media/2019/8/picture8-1566414289475.png)
+![picture8](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture8-1566414289475.png)
 Now that our ServiceInstance has been created, we can bind to it. Create a ServiceBinding resource:
 
 ```bash

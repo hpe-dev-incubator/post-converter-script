@@ -24,7 +24,7 @@ that you can get from https://eclipse.org/downloads. Other famous ones
 are Microsoft Visual Studio, and its recent open source incantation
 called Visual Studio Code, which you can get from
 https://code.visualstudio.com/download In this article, we will use
-Eclipse.![Eclipse IDE](/uploads/media/2017/9/api-java-1-1505088036254.png)
+Eclipse.![Eclipse IDE](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/api-java-1-1505088036254.png)
 # Hello HPE OneView World!
 
 -   All programmers know this; it all starts with a Hello World! So
@@ -106,7 +106,7 @@ Eclipse.![Eclipse IDE](/uploads/media/2017/9/api-java-1-1505088036254.png)
 -   Save your work
 
 You can download the entire module from the attachments of this article.
-Nevertheless, things should look like this:![Eclipse IDE workspace structure](/uploads/media/2017/9/api-java-2-1505088497854.png)
+Nevertheless, things should look like this:![Eclipse IDE workspace structure](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/api-java-2-1505088497854.png)
 When you run this code, you get the following displayed on the Eclipse
 Console:
 
@@ -217,7 +217,7 @@ cut/paste the code from HelloOneViewWorld.java.
 -   Replace the Hello World string with " HPE OneView Response is: \\n"
 
 Everything else can remain unchanged and the final code should look like
-this:![Java code to get Oneview appliance token](/uploads/media/2017/9/api-java-3-1505088504470.png)
+this:![Java code to get Oneview appliance token](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/api-java-3-1505088504470.png)
 You can now execute this code, which, provided you solved the SSL issue
 mentioned above, will return the following:
 

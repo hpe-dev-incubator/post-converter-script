@@ -5,7 +5,7 @@ author: Jeff Krenek
 tags: []
 path: virtualization-is-not-cloud-computing
 ---
-![5bf2e1a0cd93d0796238ae01-blog-content-1556211177810](/uploads/media/2019/4/gettyimages-160673315-1556211177673.jpg)
+![5bf2e1a0cd93d0796238ae01-blog-content-1556211177810](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/gettyimages-160673315-1556211177673.jpg)
 It seems everyone in the IT industry is focused on cloud computing. The industry has seen these trends in the past: distributed computing, client-server computing, and virtualization to name a few. You may feel that if you're not in the cloud, you are falling behind and missing some great opportunities. Well, you may be.  To determine if you are, it’s important to understand what cloud computing is and how it's different from previous models and technologies.
 
 For over a decade, organizations have employed virtualization to make workloads more portable, easier to configure, and – most importantly – capable of more fully utilizing all available compute resources. Virtualization technologies allow users to abstract the physical compute environment and cram a bunch more stuff onto a fixed set of compute resources.  

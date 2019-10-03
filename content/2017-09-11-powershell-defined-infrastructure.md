@@ -51,7 +51,7 @@ Oneview, for example Get-HPOVNetwork, get-HPOVServer and so on.
 # Installing the HPE OneView PowerShell module
 
 The HPE OneView PowerShell library is an HPE Open Source project that is
-hosted on [GitHub](http://hewlettpackard.github.io/POSH-HPOneView/).![Link to PowerShell library .exe hosted on GitHub](/uploads/media/2017/9/ps-basic-1-1505150268392.png)
+hosted on [GitHub](http://hewlettpackard.github.io/POSH-HPOneView/).![Link to PowerShell library .exe hosted on GitHub](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-1-1505150268392.png)
 The easiest way to install the PowerShell library is to select and
 download the
 [installer](https://github.com/HewlettPackard/POSH-HPOneView/releases)
@@ -63,7 +63,7 @@ validate that their system meets the requirements. Once it is installed,
 you can use it in your PowerShell environment (interactive or script)
 using an import-module command:
 
-import-module hponeview.200![ps basic 2](/uploads/media/2017/9/ps-basic-2-1505150284255.png)
+import-module hponeview.200![ps basic 2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-2-1505150284255.png)
 # Looking for help?
 
 We can check what this library offers with the following command:
@@ -73,13 +73,13 @@ get-command -module hponeview.200
 There is a long list of commands available. You can get more details on
 a given Cmdlet using the help command:
 
-help connect-hpovmgmt![import-module command of hponeview.200](/uploads/media/2017/9/ps-basic-3-1505150291900.png)
+help connect-hpovmgmt![import-module command of hponeview.200](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-3-1505150291900.png)
 # Connect…
 
 Let us try this immediately
 
 Connect-HPOVMgmt 213.30.139.22:37441 -username administrator -password
-password![connect command to HPEOneview](/uploads/media/2017/9/ps-basic-4-1505150298918.png)
+password![connect command to HPEOneview](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-4-1505150298918.png)
 # And start scripting!
 
 Once connected we can use the different Cmdlets to start automating an
@@ -88,15 +88,15 @@ gather versions:
 
 Get-HPOVVersion
 
-Get-HPOVVersion -ApplianceVer![Get HPE OneView version command](/uploads/media/2017/9/ps-basic-5-1505150306720.png)
+Get-HPOVVersion -ApplianceVer![Get HPE OneView version command](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-5-1505150306720.png)
 As we did in previous articles using POSTman or cURL, let us now
 retrieve the enclosures managed in this HPE Composable Infrastructure
 using:
 
-Get-HPOVEnclosure![Retrieve HPE OneView enclosures](/uploads/media/2017/9/ps-basic-6-1505150314278.png)
+Get-HPOVEnclosure![Retrieve HPE OneView enclosures](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-6-1505150314278.png)
 We can also retrieve the list of servers available:
 
-Get-HPOVServer![Retrieve HPE OneView servers](/uploads/media/2017/9/ps-basic-7-1505150322382.png)
+Get-HPOVServer![Retrieve HPE OneView servers](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-7-1505150322382.png)
 You can see that, the PowerShell library handles a lot of the hard work
 we had to do while programming directly against the REST API. The HPE
 OneView PowerShell library handles for us things such as HTTP Headers or
@@ -116,7 +116,7 @@ Let us use this to retrieve our datacenter list:
 
 $datacenters=Send-HPOVRequest "/rest/datacenters"
 
-$datacenters.members\[0\].name![Retrieve datacenters using Send-HPOVRequest cmdlet](/uploads/media/2017/9/ps-basic-8-1505150331230.png)
+$datacenters.members\[0\].name![Retrieve datacenters using Send-HPOVRequest cmdlet](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-8-1505150331230.png)
 We can use help Send-HPOVRequest to find out more about the Cmdlet, and
 this shows that the default verb is GET, but we can also use other HTTP
 verbs, for example let us say we want to change the currency property of
@@ -129,7 +129,7 @@ USD
 $datacenters.members\[0\].currency="Euros"
 
 Send-HPOVRequest $datacenters.members\[0\].uri "PUT"
-$datacenters.members\[0\]![ps basic 9](/uploads/media/2017/9/ps-basic-9-1505150337250.png)
+$datacenters.members\[0\]![ps basic 9](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ps-basic-9-1505150337250.png)
 # Feel like contributing?
 
 Well, even better. If you think that instead of using Send-HPOVRequest,

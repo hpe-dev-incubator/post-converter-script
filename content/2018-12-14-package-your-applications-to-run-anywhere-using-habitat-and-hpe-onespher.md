@@ -20,14 +20,14 @@ Usually, you can follow one of the following two approaches to take advantage of
 Habitat provides application automation capabilities that allow application teams to build, deploy, and manage any application in any environment—from traditional data centers to containerized microservices. With Habitat, you can package applications and export these packages to run on different platforms without rewriting any part of the application.
 
 In this post, you learn how I packaged Nginx, a commonly used web server, with Habitat. I describe how to easily deploy this web server on an AWS-based virtual machine managed by [HPE OneSphere](https://www.hpe.com/us/en/solutions/cloud/hybrid-it-management.html). Then, I show how to take the same Habitat package and deploy it on a Kubernetes cluster based in a private cloud. This post includes a reference [Github repository](https://github.com/mudash/hab-web-example) that contains scripts and other artifacts used to prepare this example.
-![chef phase2 fig 01](/uploads/media/2018/12/chef-phase2-fig-01-1544817980710.png)
+![chef phase2 fig 01](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-01-1544817980710.png)
 ## The Habitat way of building applications
 Traditionally, we build applications starting from the infrastructure (servers, operating systems) up towards the application as shown in this diagram:
-![chef phase2 fig 02](/uploads/media/2018/12/chef-phase2-fig-02-1544818000307.png)
+![chef phase2 fig 02](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-02-1544818000307.png)
 This leads to a high degree of coupling between all of these elements. In fact, this entire stack becomes the application, which IT departments carry around until that application is replaced. This is extremely frustrating because everything under the application is just a supporting element. The business value sits at the top, but we must drag along everything else needed to support it. 
 
 Habitat creates portability for all workloads by making an artifact (package) that only contains the application and a manifest of its dependencies. This frees the software from the operating system and middleware. You can export the Habitat package for it to run on different platforms using the exporters available with Habitat.
-![chef phase2 fig 03](/uploads/media/2018/12/chef-phase2-fig-03-1544818011639.png)
+![chef phase2 fig 03](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-03-1544818011639.png)
 A habitat package consists of a plan file and may also include application lifecycle hooks and service configuration files that describe the behavior and configuration of a running package. Detailed guidelines for writing plan are available at [Habitat website](https://www.habitat.sh/docs/developing-packages/). Once you write a plan for an application, you can use online [Habitat builder](https://bldr.habitat.sh/#/pkgs/core) service to build Habitat package or simply build it using studio that comes with Habitat.
 ## Deploying Nginx Habitat Package to HPE OneSphere managed VM
 
@@ -50,8 +50,8 @@ hab_service 'chefshafique/hab-webserver'
 python3.6 create-node demo-webserver -a -v
 ```
 The virtual machine appears in HPE OneSphere Portal.
-![chef phase2 fig 04](/uploads/media/2018/12/chef-phase2-fig-04-1544818025134.png)
-To verify, check that Nginx serves a sample web page.![chef phase2 fig 05](/uploads/media/2018/12/chef-phase2-fig-05-1544818037191.png)
+![chef phase2 fig 04](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-04-1544818025134.png)
+To verify, check that Nginx serves a sample web page.![chef phase2 fig 05](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-05-1544818037191.png)
 ## Moving from Virtual Machines to Kubernetes
 
 Habitat makes it easy to move packages to different platforms. I have used these two important tools to accomplish this task:
@@ -63,8 +63,8 @@ Habitat makes it easy to move packages to different platforms. I have used these
 Here is an example of the steps you take:
 
 1. Create a new Kubernetes cluster in your private data center. You can find a catalog item in HPE OneSphere with name ‘Kubernetes Cluster’.
-![chef phase2 fig 06](/uploads/media/2018/12/chef-phase2-fig-06-1544818046642.png)
-Clicking this catalog item will lead you to a web form where you can enter specifications for the cluster to be created. Details of these steps can be seen [here](https://www.hpeonesphere.com/docs/article/deploying-virtual-machines-and-containers-to-the-private-cloud-vmware-esxi#deploying-a-kubernetes-cluster-private). Once created, the Kubernetes cluster will show up in your project and will allow you to download the kubeconfig file that you can use with kubectl to manage the cluster.![chef phase2 fig 07](/uploads/media/2018/12/chef-phase2-fig-07-1544818089082.png)
+![chef phase2 fig 06](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-06-1544818046642.png)
+Clicking this catalog item will lead you to a web form where you can enter specifications for the cluster to be created. Details of these steps can be seen [here](https://www.hpeonesphere.com/docs/article/deploying-virtual-machines-and-containers-to-the-private-cloud-vmware-esxi#deploying-a-kubernetes-cluster-private). Once created, the Kubernetes cluster will show up in your project and will allow you to download the kubeconfig file that you can use with kubectl to manage the cluster.![chef phase2 fig 07](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-07-1544818089082.png)
 2. Export the Habitat package using Kubernetes exporter from Habtiat studio using the following command
 ```
 hab pkg export kubernetes chefshafique/hab-webserver
@@ -97,7 +97,7 @@ hab-webserver-1   	1/1     	Running   	0
 hab-webserver-2   	1/1     	Running   	0      
 ```
 Check that Nginx serves the default web page.
-![chef phase2 fig 08](/uploads/media/2018/12/chef-phase2-fig-08-1544818102087.png)
+![chef phase2 fig 08](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/chef-phase2-fig-08-1544818102087.png)
 ## Conclusion
 
 Habitat exists to solve the problem of how we build, deploy, and manage applications. Building applications so they can run anywhere can sound ambitious. But, with Habitat, this complicated task becomes simple. In this post, I outlined steps for an example scenario that demonstrates deploying Nginx webserver on a virtual machine and a Kubernetes cluster. Since HPE OneSphere provides a unified cloud management portal that enables you to manage both public and private cloud resources hosted on different platforms such as virtual machines and Kubernetes clusters, Habitat can be an excellent tool in your toolkit to move applications between platforms while managing resources through HPE OneSphere.

@@ -5,7 +5,7 @@ author: Mike Walrath
 tags: ["Github"]
 path: github-the-project-management-tool-you-didnt-know-you-wanted
 ---
-![5bf2e1a0cd93d0796238ae01-blog-content-1558638303118](/uploads/media/2019/5/hpe-dev-github-1558638303117.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558638303118](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/hpe-dev-github-1558638303117.png)
 The project management landscape is filled with lots of tools and processes that can be used for a wide variety of purposes. Managing a software development operation today, however, doesn’t always lend itself to generalities. Taking in a broad view of a project to understand how all the pieces connect and contribute requires a subtle set of skills. Being able to plan work, identify obstacles, and ensure effective communications is essential for the long-term success of a team. In today’s dynamic, fast-paced industry, this is very difficult to achieve.
 
 ## Project Management Landscape 

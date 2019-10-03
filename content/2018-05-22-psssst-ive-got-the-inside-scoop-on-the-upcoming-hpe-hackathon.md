@@ -5,7 +5,7 @@ author: HPE DEV staff
 tags: ["hackathon","hpe-onesphere","community"]
 path: psssst-ive-got-the-inside-scoop-on-the-upcoming-hpe-hackathon
 ---
-![HPE Hackathon](/uploads/media/2018/5/hpe-hackathon-3d-v1-1-1526997723888.jpg)
+![HPE Hackathon](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/5/hpe-hackathon-3d-v1-1-1526997723888.jpg)
 You may not be aware, but something big is about to happen within the Developer Community at HPE. On May 24, HPE developers from around the world will participate in the group’s first hackathon. 
 
 For those unfamiliar with the term, a hackathon is a coding contest where developers, programmers, and other creative experts come together to collaborate on a range of software development topics. Participants work quickly – often over a short period of time – to innovate and solve challenges, resulting in creating usable software everyone can use. 

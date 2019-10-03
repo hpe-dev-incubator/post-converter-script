@@ -9,11 +9,11 @@ path: updating-python-and-openssl-on-os-x
 Security is a vital part of any server. On our Enterprise servers we provide options for higher levels of security. However, Mac computers ship with an older version of Openssl, a vital component for our python-redfish-library. In this blog we will cover updating Openssl to at least 1.0.0 to allow support for our python-redfish-library.
 **Higher Security Settings**
 
-“High Security" is one of the Higher Security levels offered on our Gen10 servers. When “High Security” or other higher security settings are enabled, Openssl must be used to connect to the server. Below is a screenshot where these security settings can be changed. It can be found under Security > Encryption.![openssl1](/uploads/media/2017/12/1-1513693864107.jpg)
+“High Security" is one of the Higher Security levels offered on our Gen10 servers. When “High Security” or other higher security settings are enabled, Openssl must be used to connect to the server. Below is a screenshot where these security settings can be changed. It can be found under Security > Encryption.![openssl1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/1-1513693864107.jpg)
 
 **Running Examples without Openssl**
 
-Here we show an example of an attempt to execute an example script on a Mac without updated Openssl.![openssl2](/uploads/media/2017/12/2-1513693937238.png)
+Here we show an example of an attempt to execute an example script on a Mac without updated Openssl.![openssl2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/12/2-1513693937238.png)
 
 Note in the Terminal we are utilizing Python 2.7.11 as well as OpenSSL 0.9.8zg. Here we attempted to execute the first example, ex01_get_resource_directory.py. Since our version is outdated, we have an error in attempting to connect.
 
@@ -32,7 +32,7 @@ To install Homebrew:
 https://raw.githubusercontent.com/Homebrew/install/master/install`
 
 Paste this command into your console, and Homebrew will install itself. Note that this should not be done with sudo.
-![ssl3](/uploads/media/2018/2/3-1518714501022.png)
+![ssl3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/2/3-1518714501022.png)
 
 
 Upon installing Homebrew, the first thing we want to do is update it.
@@ -66,9 +66,9 @@ This first command may work in certain versions of Homebrew, but recent updates 
 Now that the symlinks have been created, we can install Python:
 
 `brew install python --with-brewed-openssl`
-![ssl4](/uploads/media/2018/2/4-1518714723500.png)
+![ssl4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/2/4-1518714723500.png)
 
-Upon completion, we will have Python installed with the new version of Openssl. In the example below, we have opened the new version of Python, as well as checked the version of Openssl, which shows as 1.0.2j.![ssl5.2](/uploads/media/2018/2/5-1518716804698.png)
+Upon completion, we will have Python installed with the new version of Openssl. In the example below, we have opened the new version of Python, as well as checked the version of Openssl, which shows as 1.0.2j.![ssl5.2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/2/5-1518716804698.png)
 
 
 **Setting the new Python as default**
@@ -98,7 +98,7 @@ Note that we do not want to remove the system Python, since some Mac services re
 
 
 Now that we’ve updated Openssl, and integrated it with Python, we can use this new version of Python to utilize our python-redfish-library. Note that pip install may need to be run to reinstall the redfish library. (pip install python-redfish-library) In the example below, IDLE was used to run the first example again:
-![6.2ssl](/uploads/media/2018/2/6-1518717614095.png)
+![6.2ssl](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/2/6-1518717614095.png)
 
 
 As you can see, our Python has since been updated to the newest version as of writing, 2.7.12. Additionally, the example runs successfully instead of failing.

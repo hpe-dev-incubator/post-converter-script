@@ -9,11 +9,11 @@ In this previous article, [Surviving in the Schema… while running our
 first
 inventory](https://community.dev.hpe.com/t5/Blogs/Surviving-in-the-Schema-while-running-our-first-inventory/ba-p/235998),
 we discussed how to run a discovery of the environment managed by HPE
-OneView. We derived a tree structure of the following format:![Datacenter tree structure](/uploads/media/2017/9/ov-ilo-sso-1-1505149237398.png)
+OneView. We derived a tree structure of the following format:![Datacenter tree structure](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-1-1505149237398.png)
 We can check the schema for a server-hardware using our favorite REST
 client tool (Postman extension for Chrome in our case) with the
 following command: GET /rest/server-hardware/schema against the HPE
-OneView API.![check the schema for a server-hardware using our favorite REST client tool](/uploads/media/2017/9/ov-ilo-sso-2-1505149245923.png)
+OneView API.![check the schema for a server-hardware using our favorite REST client tool](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-2-1505149245923.png)
 We notice that a management processor (mp) is also available in a
 server-hardware and that some details about the management processor are
 provided (mpFirmwareVersion, mpHostInfo, mpModel, mpState).
@@ -30,12 +30,12 @@ of iLO processors present on Gen8 and Gen9 of ProLiant servers. iLO
 management processors provide a wide variety of great options when it
 comes to management of servers in an out-of-band manner. To start with,
 the management IP address of the iLO offers a web console to manage the
-server-hardware.![ILO remote console to the system](/uploads/media/2017/9/ov-ilo-sso-3-1505149253257.png)
+server-hardware.![ILO remote console to the system](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-3-1505149253257.png)
 But probably the most used feature of the iLO processor, is the
 capability to open a remote console to the system, which really allows
 to be "on" the system without ever having to enter a computer room, and
 whether or not the server is powered on, or installed with an operating
-system or not.![ILO remote console to the system](/uploads/media/2017/9/ov-ilo-sso-4-1505149260202.png)
+system or not.![ILO remote console to the system](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-4-1505149260202.png)
 The HPE OneView web console provides a direct link the web interface of
 the iLO of any given server-hardware, as well as a direct link to the
 iLO Remote Console of the server. This is great but what would also be
@@ -63,14 +63,14 @@ account.
 We query for the list of server-hardware available to us using a GET
 /rest/server-hardware, and from there pick a given one of them using its
 URI (for example
-/rest/server-hardware/37333036-3831-4753-4831-30325838524E)![query for the list of server-hardware available to us](/uploads/media/2017/9/ov-ilo-sso-5-1505149266642.png)
+/rest/server-hardware/37333036-3831-4753-4831-30325838524E)![query for the list of server-hardware available to us](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-5-1505149266642.png)
 We can see all the details about this particular server-hardware iLO
 instance. All? Well, not quite, because if we check the HP OneView API
 Reference we can find the two following commands:
 
 -   GET /rest/server-hardware/{id}/iloSsoUrl
 
--   GET /rest/server-hardware/{id}/remoteConsoleUrl![HPE Oneview API reference to retrieve server hardware](/uploads/media/2017/9/ov-ilo-sso-6-1505149274227.png)
+-   GET /rest/server-hardware/{id}/remoteConsoleUrl![HPE Oneview API reference to retrieve server hardware](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-6-1505149274227.png)
 Note: As you can see, the HPE OneView API Reference describes it but it
 does not appear in the server-hardware description nor in the schema
 description
@@ -78,11 +78,11 @@ description
 If we try to use the first one:
 /rest/server-hardware/37333036-3831-4753-4831-30325838524E/iloSsoUrl
 
-We obtain the following result:![Retrieve server hardware ILO SSO Url](/uploads/media/2017/9/ov-ilo-sso-7-1505149281204.png)
+We obtain the following result:![Retrieve server hardware ILO SSO Url](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-7-1505149281204.png)
 While if we try to query HPE OneView with the following additional URI:
 /rest/server-hardware/37333036-3831-4753-4831-30325838524E/remoteConsoleUrl
 
-We get the following response:![Oneview API reference to get server hardware](/uploads/media/2017/9/ov-ilo-sso-8-1505149288674.png)
+We get the following response:![Oneview API reference to get server hardware](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/ov-ilo-sso-8-1505149288674.png)
 Using these two calls, we can offer three types of interesting
 integrations:
 

@@ -67,10 +67,10 @@ Step-by-step instructions to install Nagios Core server, NRPE add-on and NRPE da
 
 Figure 1 and Figure 2 show Nagios Core-based monitoring with NRPE add-on for a KVM-based private cloud services and resources, as well as OpenStack services (nova, neutron, glance, cinder, VM instances status) monitored from a Linux workstation with OpenStack CLI installed: 
 
-![5bf2e1a0cd93d0796238ae01-blog-content-1559166146679](/uploads/media/2019/5/picture-1559166146677.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1559166146679](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture-1559166146677.png)
 
 *Figure 1 – Health monitoring of a compute server*
-![5bf2e1a0cd93d0796238ae01-blog-content-1559166225374](/uploads/media/2019/5/picture11-1559166225373.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1559166225374](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture11-1559166225373.png)
 *Figure 2 – Health monitoring of OpenStack control plane services*In this scenario, standard Nagios NRPE check plugins are used to monitor compute server health (processes, CPU load, storage disk space, reachability, NTP time, DNS resolution). HPE DEV developed a few simple bash scripts and leveraged several others from existing sample codes available in GitHub to create custom checks (also known as plugins). These custom checks are used to monitor the status of the OpenStack services such as Nova, Cinder, Glance, Neutron, and the OpenStack control plane REST API endpoint. They are also used to verify the secure communication channel between the on-premises compute servers and the control plane hosted in the cloud.
 
 <br/>

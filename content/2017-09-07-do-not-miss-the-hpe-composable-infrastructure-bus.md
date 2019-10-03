@@ -38,7 +38,7 @@ example, HPE OneView has implemented the server side of the message bus
 using RabbitMQ.
 
 The following picture illustrate the concept of producer/consumer and
-message bus![Illustrate the concept of producer/consumer and message bus](/uploads/media/2017/9/messabus-1-1504810187875.png)
+message bus![Illustrate the concept of producer/consumer and message bus](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/messabus-1-1504810187875.png)
 # HPE OneView Message Bus? What for?
 
 HPE OneView is using internally message busses, to exchange data between
@@ -153,7 +153,7 @@ The MSMB only accept one routing key: msmb.\#
 
 The following picture show routing keys in action with three different
 partner application subscribing to different types of messages from the
-HPE Composable Infrastructure.![routing keys in action with three different partner application subscribing to different types of messages](/uploads/media/2017/9/messabus-2-1504810196244.png)
+HPE Composable Infrastructure.![routing keys in action with three different partner application subscribing to different types of messages](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/messabus-2-1504810196244.png)
 # Security
 
 Security of this mechanism is implemented through SSL. In order to start
@@ -241,13 +241,13 @@ them up as fast as the appliance puts them on the queues.
 
 We have built a demo "consumer" application to browse the HPE OneView
 Message Busses, so let us start it up and as a simple example, subscribe
-to all Ethernet Networks changes.![demo "consumer" application to browse the Ethernet network changes of HPE OneView Message Busses](/uploads/media/2017/9/messabus-3-1504810203042.png)
+to all Ethernet Networks changes.![demo "consumer" application to browse the Ethernet network changes of HPE OneView Message Busses](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/messabus-3-1504810203042.png)
 Then let us use the HPE OneView web console to create a new Ethernet
-network:![HPE OneView web console to create a new Ethernet network](/uploads/media/2017/9/messabus-4-1504810211206.png)
+network:![HPE OneView web console to create a new Ethernet network](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/messabus-4-1504810211206.png)
 Back on the MessageBus Explorer, we can see that it has been notified of
 that change in the HPE Composable Infrastructure and can potentially
 take the necessary actions. In our case, it simply displays the details
-of the messages in a list.![displays the modified or created or updated details of the Oneview messages in a list.](/uploads/media/2017/9/messabus-5-1504810217256.png)
+of the messages in a list.![displays the modified or created or updated details of the Oneview messages in a list.](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/messabus-5-1504810217256.png)
 We can select to view the JSON details which displays the following
 content (highlighted in red are the important fields):
 

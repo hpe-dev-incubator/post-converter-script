@@ -5,7 +5,7 @@ author: HPE DEV staff
 tags: ["kubecon-seattle-2018"]
 path: get-hands-on-with-hpe-hybrid-cloud-and-container-solutions-at-kubecon-de
 ---
-![kubecon na 2018](/uploads/media/2018/12/kubecon-na-2018-1543866788069.jpg)
+![kubecon na 2018](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/12/kubecon-na-2018-1543866788069.jpg)
 KubeCon is the Cloud Native Computing Foundation’s flagship conference, which gathers adopters and technologists from leading open source and cloud native communities for four days to further the education and advancement of cloud native computing. This year, HPE will be at [KubeCon 2018](https://events.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/co-located-events/) in Seattle, WA from December 10-13, 2018. 
 
 From beginners to experts, join HPE for their workshops covering the basics of how to implement HPE hybrid cloud and container solutions. Don’t miss your chance to walk through the challenges of deploying and managing applications in hybrid cloud environments and get help from HPE’s experts in the following areas:

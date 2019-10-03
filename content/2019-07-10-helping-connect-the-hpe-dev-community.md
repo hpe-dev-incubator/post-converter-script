@@ -5,7 +5,7 @@ author: Dale Rensing
 tags: []
 path: helping-connect-the-hpe-dev-community
 ---
-![5bf2e1a0cd93d0796238ae01-blog-content-1562774149709](/uploads/media/2019/5/connecting-community2-1562774149692.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1562774149709](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/connecting-community2-1562774149692.png)
 Hey there… Dale Rensing here. You may remember my name as the editor of this newsletter, but I haven’t really introduced myself properly. Although I’m fairly new to the Hewlett Packard Enterprise (HPE) Chief Design Office, I’ve been around the technology industry for quite some time. I’ve been lucky in my career to often find myself working with teams of highly-talented engineers engaged in cutting-edge technology, getting to report on their innovation and extrapolating its value in customer terms. As a writer and the news editor of the HPE Newsletter and the HPE DEV website, my job now is to connect you with all activities within HPE DEV. 
 
 HPE DEV builds, communicates, and collaborates with developers and operators in an open community, with the aim of making the deployment of applications across traditional and cloud infrastructures simple and effortless. Part of my job includes working hand-in-hand with HPE DEV engineers, encouraging them to share news and tutorials that are pertinent to the overall community. I also report on different topics – chasing news stories at events with Sir Hackington and bringing more awareness to open source projects from HPE, such as Grommet. 

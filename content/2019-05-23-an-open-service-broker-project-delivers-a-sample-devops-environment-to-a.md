@@ -55,15 +55,15 @@ In this first step, prepare the virtual machine environment for hosting the OSB 
 
 Log in to HPE OneSphere instance, choose Settings (see Figure 1), then click on Catalog Registry.
 
-![5bf2e1a0cd93d0796238ae01-blog-content-1558638905137](/uploads/media/2019/5/picture1-1558638905136.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558638905137](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture1-1558638905136.png)
 Figure 1. HPE OneSphere Settings
 
 Register the OSB broker service in the catalog by clicking the plus (+) sign in the Catalog Registry page.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558638965078](/uploads/media/2019/5/picture11-1558638965078.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558638965078](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture11-1558638965078.png)
 Figure 2. Register OSB broker service.
 
 The broker service now appears in the HPE OneSphere catalog.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639040081](/uploads/media/2019/5/picture13-1558639040081.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639040081](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture13-1558639040081.png)
 Figure 3. The OSB broker service appears as osb-devops.
 
 ### Deploy an instance of the OSB broker service – DevOps environment
@@ -73,44 +73,44 @@ The DevOps OSB broker service offers two virtual environments; one is for Jenkin
 Deploying this broker service provisions two AWS CloudFormation stacks. Each stack has one virtual machine. Corresponding software will be installed into each VM respectively, with all dependent tools and utilities. The deployment will also create security groups for both virtual machines and open ports for Jenkins service and WebServer.
 
 Figure 4 shows the screen start deploying an instance of the DevOps environment. 
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639104804](/uploads/media/2019/5/picture14-1558639104803.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639104804](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture14-1558639104803.png)
 Figure 4. Start deploying an instance of the OSB broker service.
 
 The deployment of OSB broker service within HPE OneSphere is in progress.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639161151](/uploads/media/2019/5/picture15-1558639161150.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639161151](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture15-1558639161150.png)
 Figure 5. The deployment in progress.
 
 In the AWS CloudFormation service portal, two stacks (one for Jenkins and the other for the web server) are in the process of being deployed.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639251376](/uploads/media/2019/5/picture16-1558639251375.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639251376](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture16-1558639251375.png)
 Figure 6. Showing the DevOps stacks creation in progress.
 
 After a while, the deployment of the OSB service broker completes.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639363749](/uploads/media/2019/5/picture20-1558639363748.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639363749](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture20-1558639363748.png)
 Figure 7. The completed OSB service broker deployment
 
 After an instance of the OSB broker service is successfully deployed, you can access the DevOps environment from either the AWS CloudFormation portal or HPE OneSphere portal.
 
 In the AWS CloudFormation portal, when you click on each stack, you should see both the SSH connection information and a WebUrl link.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639415295](/uploads/media/2019/5/picture111-1558639415294.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639415295](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture111-1558639415294.png)
 Figure 8. AWS CloudFormation portal showing the SSH connection and WebUrl link.
 
 In the HPE OneSphere portal, access information is available by clicking on the Access link in the deployment page.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639474818](/uploads/media/2019/5/picture671-1558639474817.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639474818](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture671-1558639474817.png)
 Figure 9. Access page shows both SSH connection and Web URL link.
 
 To open the Jenkins portal, click on the WebUrl link of the Jenkins stack. Follow the on-screen instructions to log in with a default initial password, and you will be connected to the Jenkins portal.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639531780](/uploads/media/2019/5/picture551-1558639531779.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639531780](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture551-1558639531779.png)
 Figure 10. Jenkins portal.
 
 A web server home page served by a sample index page (PHP) will open when you click on the WebUrl link of the WebServer stack.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639581209](/uploads/media/2019/5/picturel1-1558639581208.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639581209](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picturel1-1558639581208.png)
 Figure 11. Web server index page.
 
 ### Delete the DevOps deployment
 
 You can delete a deployment in HPE OneSphere. The deletion will further delete the DevOps stacks in AWS. This means that the security group and all virtual machines instances will be deleted.
-![5bf2e1a0cd93d0796238ae01-blog-content-1558639696893](/uploads/media/2019/5/pictures1-1558639696893.png)
-Figure 12. Deleting the DevOps deployment from HPE OneSphere.![5bf2e1a0cd93d0796238ae01-blog-content-1558639745848](/uploads/media/2019/5/picture001-1558639745847.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1558639696893](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/pictures1-1558639696893.png)
+Figure 12. Deleting the DevOps deployment from HPE OneSphere.![5bf2e1a0cd93d0796238ae01-blog-content-1558639745848](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/picture001-1558639745847.png)
 Figure 13. DevOps stacks are being deleted in the AWS CloudFormation portal.
 
 ### Unregister the OSB broker service

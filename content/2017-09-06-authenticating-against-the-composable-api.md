@@ -13,7 +13,7 @@ Composable API (also referenced here as the HPE OneView API), using the
 which version of the API is expected by an application. Let us now use
 this to open a login session to HPE OneView. First, we can check the
 syntax of the login session by looking up "login" in the online help.
-This is what we find:![check the syntax of the login session by looking up "login" in the online help](/uploads/media/2017/9/loginsession-1504732180732.png)
+This is what we find:![check the syntax of the login session by looking up "login" in the online help](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/loginsession-1504732180732.png)
 # Getting a session token
 
 From the documentation, we can see that in order to open a login
@@ -61,9 +61,9 @@ parameters and hit Submit.
 | Payload | {                             |	                         							   |
 |         |  "userName":"administrator",  |                              						   |
 |         |  "password":"password"    	  |														   |	
-|         |  }                            |                                                        |![HttpRequester example to retrieve the login session token for Oneview login](/uploads/media/2017/9/httprequester-1504732233332.png)
+|         |  }                            |                                                        |![HttpRequester example to retrieve the login session token for Oneview login](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/httprequester-1504732233332.png)
 The response we get is in the following form (extracted from online
-documentation):![HttpRequester response showing the session Id](/uploads/media/2017/9/httpresponse-1504732248902.png)
+documentation):![HttpRequester response showing the session Id](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/httpresponse-1504732248902.png)
 The **sessionID**, also known as the session token is what we are
 looking for.
 
@@ -90,12 +90,12 @@ Use HttpRequester with the following parameters and press Submit:
 | Header  | Content-Type=application/json | 													   |
 |		  |	Accept=application/json       | 													   |	
 |         | X-API-Version=200             |                                                        |
-|         | Auth=your **sessionID**		  |                                                        |![Retrieve global settings using the generated session token in API call](/uploads/media/2017/9/httprequesterwithauth-1504732241236.png)
+|         | Auth=your **sessionID**		  |                                                        |![Retrieve global settings using the generated session token in API call](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/httprequesterwithauth-1504732241236.png)
 As a quick check, remove the `Auth` HTTP Header, and try again. You should
 get a 401 Status code (Unauthorized). The details of the error clearly
 state that you forgot to provide an `Auth` header for that request.
 
-Note: HTTP Headers are case insensitive: Auth or auth would work fine.![Response showing Auth header is missing](/uploads/media/2017/9/forgotauthheader-1504732225620.png)
+Note: HTTP Headers are case insensitive: Auth or auth would work fine.![Response showing Auth header is missing](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/forgotauthheader-1504732225620.png)
 # Cleaning up
 
 Finally, it is best practice to delete a token when it is not needed
@@ -113,11 +113,11 @@ anymore. In HttpRequester, you can submit the following request:
 |         | Auth=your **sessionID**       |                                                        |
 
 You should get a Status of 204 (anything in the 2xx is successful) with
-no content for the response:![Response showing successful token deletion](/uploads/media/2017/9/deletelogintoken-1504732217113.png)
+no content for the response:![Response showing successful token deletion](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/deletelogintoken-1504732217113.png)
 The session token was deleted. If you are curious, try to reissue the
 request from the HttpRequester History, which retrieved
 `/rest/global-settings`. This time you should get another 401
-Authorization error. Your token is not valid anymore.![tokeninvaliderror](/uploads/media/2017/9/tokeninvaliderror-1504732255731.png)
+Authorization error. Your token is not valid anymore.![tokeninvaliderror](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/tokeninvaliderror-1504732255731.png)
 # Key takeaways
 
 Throughout the article, we have described what software will need to do

@@ -36,11 +36,11 @@ cd my-app
 Once inside, delete the files `App.css`, `App.test.js`, `index.css`, and `logo.svg` that are located in the src folder. These files will not be used in this tutorial.
 
 *Delete the highlighted files.*
-![5bf2e1a0cd93d0796238ae01-blog-content-1557502375030](/uploads/media/2019/5/deletethese-1557502375028.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1557502375030](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/deletethese-1557502375028.png)
 All associated imports and components in index.js and App.js must be deleted as well.
 
-> In App.js, delete the highlighted imports and header component.![5bf2e1a0cd93d0796238ae01-blog-content-1557502556519](/uploads/media/2019/5/delete-app-1557502556518.png)
-> In index.js, delete the highlighted import.![5bf2e1a0cd93d0796238ae01-blog-content-1557502646696](/uploads/media/2019/5/delete-index-1557502646695.png)
+> In App.js, delete the highlighted imports and header component.![5bf2e1a0cd93d0796238ae01-blog-content-1557502556519](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/delete-app-1557502556518.png)
+> In index.js, delete the highlighted import.![5bf2e1a0cd93d0796238ae01-blog-content-1557502646696](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/delete-index-1557502646695.png)
 Your `App.js` file should look like this,
 
 ```jsx
@@ -171,7 +171,7 @@ export default App;
 ```
 
 It's time to check your work.
-![5bf2e1a0cd93d0796238ae01-blog-content-1557503147092](/uploads/media/2019/5/tutorialcomplete-1557503147092.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1557503147092](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/5/tutorialcomplete-1557503147092.png)
 *Maybe, dial it back a bit.*
 
 ## Resources

@@ -5,8 +5,8 @@ author: Said Syed, Director Developer Experience and Product Incubation at HPE
 tags: ["hackathon","hpe-onesphere","community"]
 path: winners-named-in-the-hpe-developer-community-hackathon
 ---
-![hackathon](/uploads/media/2018/6/hackathon-1530031408442.png)
-On May 24, HPE developers from around the world and across various HPE organizations began participating in the HPE Hackathon. A total of 49 individual hackers took up the challenge, comprising 18 teams that ranged in size from 1-7 participants. In the end, 12 teams crossed the finish line and presented outstanding projects to a distinguished panel of 4 judges.![may24 2](/uploads/media/2018/6/may24-2-1530031551619.jpg)
+![hackathon](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/6/hackathon-1530031408442.png)
+On May 24, HPE developers from around the world and across various HPE organizations began participating in the HPE Hackathon. A total of 49 individual hackers took up the challenge, comprising 18 teams that ranged in size from 1-7 participants. In the end, 12 teams crossed the finish line and presented outstanding projects to a distinguished panel of 4 judges.![may24 2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/6/may24-2-1530031551619.jpg)
 Judging took place from June 4th-10th. Teams were given 15 minutes to present their projects, which were judged on the following criteria:
 - 20%: Completeness & Presentation
 - 20%: Technical Merit
@@ -17,12 +17,12 @@ Participant experience varied widely--from teams with little to no coding backgr
 
 # And the winners are… 
 
-Congratulations to **Team Chatbot**, who was awarded first place for their project. Team members include Jesse Olsen, Dana Lynn, and Jeroen Kleen. Team Chatbot built an awesome chatbot based on a React/Redux platform. More details about this project will be coming soon on the HPE DevCom portal.![ric hack](/uploads/media/2018/6/ric-hack-1530031624425.jpg)
+Congratulations to **Team Chatbot**, who was awarded first place for their project. Team members include Jesse Olsen, Dana Lynn, and Jeroen Kleen. Team Chatbot built an awesome chatbot based on a React/Redux platform. More details about this project will be coming soon on the HPE DevCom portal.![ric hack](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/6/ric-hack-1530031624425.jpg)
 **Team Reality Distortion** received second place honors. Congratulations to the one-man team of Damian Janiszewski.
 
 Damian developed an HPE OneSphere extension module that exports HPE OneSphere metrics for Prometheus time series database and alerting system. Prometheus metrics are then easily visualized using Grafana dashboards.
 
-![hackathon warsaw](/uploads/media/2018/6/image-uploaded-from-ios-1530031727049.jpg)
+![hackathon warsaw](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/6/image-uploaded-from-ios-1530031727049.jpg)
 Third place went to **Team Last Bench**, for their project. Contributing team members include Gandharva S, Shiva Kumar M, Krishna Kanth Mallela, Manjunath Patil, and Sahana Sampige Prabhakar.
 
 **Thank you to all participants**

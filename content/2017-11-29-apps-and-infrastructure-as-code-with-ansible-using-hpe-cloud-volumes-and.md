@@ -30,7 +30,7 @@ Certain assumptions are being made and are not covered in depth and a bit out of
 * We're deploying [Minio](https://minio.io) in distributed mode. Minio is a standalone AWS S3 compatible storage server. Some knowledge of AWS S3 is helpful but not required.
 
 # Overview
-This stack diagram illustrate our end-state to help better understand what we're deploying.![Architecture Overview](/uploads/media/2017/11/blog-diagram-hpecv-1511946990044.png)
+This stack diagram illustrate our end-state to help better understand what we're deploying.![Architecture Overview](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/11/blog-diagram-hpecv-1511946990044.png)
 # Setup
 The example goes from spinning up eight EC2 instances to consume HPE Cloud Volumes, install Docker, setup a Docker Swarm, deploy [Minio](https://www.minio.io)/[NGINX](https://www.nginx.com) and setup an ELB ([Elastic Load Balancer](https://aws.amazon.com/elasticloadbalancing/)) for external facing traffic. Some utility playbooks shows off some of the Ansible role features and capabilities such as expanding storage and setting new IOPS limits. There's also a playbook provided to destroy all the resources created during the deployment phase.
 
@@ -189,8 +189,8 @@ NimbleStorage.Ansinimble : Connect Cloud Volume --------------------------------
 Playbook run took 0 days, 0 hours, 12 minutes, 8 seconds
 ```
 
-Use a web browser to visit that URL or skip directly to the `mc` part below the screenshots:![Minio Login](/uploads/media/2017/11/minio-login-1511947049263.png)
-Once logged you'll see something that resembles this:![Minio Empty](/uploads/media/2017/11/minio-empty-1511947029503.png)
+Use a web browser to visit that URL or skip directly to the `mc` part below the screenshots:![Minio Login](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/11/minio-login-1511947049263.png)
+Once logged you'll see something that resembles this:![Minio Empty](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/11/minio-empty-1511947029503.png)
 Here you can either create buckets and upload files or you can simply use the `mc` utility to access Minio:
 ```
 sudo wget -O /usr/local/bin/mc wget https://dl.minio.io/client/mc/release/linux-amd64/mc
@@ -218,7 +218,7 @@ ansible-playbook util_expand_cloud_volume.yml -e '{"cloud_volume_size": 1000000}
 ```
 **Note:** Extra variables such as `-e` can normally be passed as key/value pairs without JSON syntax. However, the REST APIs have strict data types and Jinja2 (the template engine Ansible relies on) converts to plain strings when not passing parameters in JSON.
 
-You should have similar space as observed in the screenshots above if you didn't tinker with the default volume sizes. The new capacity is immediately available to Minio and should look something like this (if you didn't tinker with the cluster size):![Minio Resized](/uploads/media/2017/11/minio-resized-1511947069528.png)
+You should have similar space as observed in the screenshots above if you didn't tinker with the default volume sizes. The new capacity is immediately available to Minio and should look something like this (if you didn't tinker with the cluster size):![Minio Resized](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/11/minio-resized-1511947069528.png)
 While it's entirely possible to write a playbook that takes both capacity and IOPS in one go, it's more intuitive to perform controlled updates in isolated increments.
 
 Set a new IOPS limit:
@@ -226,7 +226,7 @@ Set a new IOPS limit:
 ansible-playbook util_iops_cloud_volume.yml -e '{"cloud_volume_iops": 10000 }'
 ```
 
-The new limit and capacity should be reflected in the HPE Cloud Volumes portal:![Portal](/uploads/media/2017/11/portal-1511947086096.png)
+The new limit and capacity should be reflected in the HPE Cloud Volumes portal:![Portal](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/11/portal-1511947086096.png)
 ## Destroy
 Once done playing in the sandbox, the following playbook destroys **everything** provisioned. Including your HPE Cloud Volumes, ELB and EC2 instances.
 ```

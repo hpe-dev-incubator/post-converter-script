@@ -5,7 +5,7 @@ author: HPE DEV staff
 tags: []
 path: hacktoberfest-2019-help-grommet-and-win-a-free-t-shirt-in-the-process
 ---
-![picture1](/uploads/media/2019/8/picture1-1569859873855.png)
+![picture1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture1-1569859873855.png)
 Are you a developer looking to help drive the growth of open source software and make positive contributions to the ever-growing Grommet community? Are you a fan of [Grommet](https://v2.grommet.io/) and have ideas on some features you’d like to see? Well, here’s your chance to contribute and get a free t-shirt in the process!
 
 Hacktoberfest is a month-long celebration run by [DigitalOcean](https://www.digitalocean.com/) and [DEV design](https://dev.to/) aimed at encouraging coders worldwide to contribute to open source software. It is open to all backgrounds and skill levels, from experienced developers to students just learning to code.

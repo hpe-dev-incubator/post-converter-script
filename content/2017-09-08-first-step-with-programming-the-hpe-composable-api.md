@@ -78,13 +78,13 @@ http://www.hpe.com/info/oneview/docs. There, you will find a
 downloadable version of the document, which is nice to have on your
 laptop as it presents itself as a set of HTML pages that is easy to
 navigate. As an example, once you open the help page, you can search for
-"version" and you will find something like this:![Response of get API version REST call](/uploads/media/2017/9/progapi-1-1504889058235.png)
+"version" and you will find something like this:![Response of get API version REST call](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/progapi-1-1504889058235.png)
 There is a page like this for each single API call available in HPE
 OneView. From the information provided, we can see that a call to GET
 /rest/version will return the versions supported by the API. Let’s use
 this for our first interaction with the HPE OneView API. If you scroll
 down a bit in the help page, you will also find what kind of response is
-expected:![Response of get API version REST call](/uploads/media/2017/9/progapi-2-1504889064687.png)
+expected:![Response of get API version REST call](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/progapi-2-1504889064687.png)
 We can see, that this API returns a Content-Type of JSON (JavaScript
 Object Notation). This is a very popular format used to exchange data
 with an API. It is similar to XML, just a little more human readable.
@@ -103,8 +103,8 @@ call to an API without writing any code? There are a number of simple
 solutions for this. For example, there are several browser plug-ins
 available and I am sure you will find one for your favorite browser
 (HttpRequester for Firefox, POSTman for Chrome, just to name a few). My
-favorite is **HttpRequester** for Firefox and it looks like this:![HttpRequester tool for Firefox](/uploads/media/2017/9/progapi-3-1504889071823.png)
-If you prefer Chrome, then **POSTman** would look like this:![POSTman for Google Chrome](/uploads/media/2017/9/progapi-4-1504889079190.png)
+favorite is **HttpRequester** for Firefox and it looks like this:![HttpRequester tool for Firefox](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/progapi-3-1504889071823.png)
+If you prefer Chrome, then **POSTman** would look like this:![POSTman for Google Chrome](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/progapi-4-1504889079190.png)
 # Let's go!
 
 Both are very easy to install and intuitive to use, but I will continue
@@ -124,7 +124,7 @@ certificate. Otherwise HttpRequester will not work.**
 There is no request payload to worry about for the GET /rest/version
 call. You can specify an HTTP Header to explicitly tell the API that we
 expect a response in JSON, you might get XML response otherwise. When
-ready, press the **Submit** button.![Retrieve the oneview version using HttpRequester for firefox](/uploads/media/2017/9/progapi-5-1504889085855.png)
+ready, press the **Submit** button.![Retrieve the oneview version using HttpRequester for firefox](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/progapi-5-1504889085855.png)
 HttpRequester will contact the URL specified and call GET version from
 the API. In the Response section, as illustrated above, you want to
 check the HTTP status code. A value of 200 means it was successful.

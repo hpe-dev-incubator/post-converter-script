@@ -35,25 +35,25 @@ STEP 1:
 
 Create an ASP.NET Web Application in an existing resource group (CICDRg1), specifying a free SKU (Free F1) App Service Plan to host the web application:
 
-![picture1](/uploads/media/2019/8/picture1-1569515900610.png)
-![picture2](/uploads/media/2019/8/picture2-1569515891835.png)
-Azure App service gives you a custom URL for your published Web App resource under domain azurewebsites.net. For a production environment, a company would have to use a paid tier App Service Plan to map their [custom DNS domain](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain) name to their Azure Web App. For this test, you can use the default azurewebsites.net domain. ![picture3](/uploads/media/2019/8/picture3-1569515886048.png)
+![picture1](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture1-1569515900610.png)
+![picture2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture2-1569515891835.png)
+Azure App service gives you a custom URL for your published Web App resource under domain azurewebsites.net. For a production environment, a company would have to use a paid tier App Service Plan to map their [custom DNS domain](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-custom-domain) name to their Azure Web App. For this test, you can use the default azurewebsites.net domain. ![picture3](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture3-1569515886048.png)
 STEP 2:
 
 Next, select the __Deployment Center__ in the left menu of the Web App resource you just created. Select __GitHub__ and follow the authorization prompts to sign in to your GitHub account. This will authorize the Azure App Service to make the connection to your GitHub account using OAuth, an open-standard authorization protocol. You only need to authorize once with GitHub source control service. 
-![picture4](/uploads/media/2019/8/picture4-1569515878902.png)
+![picture4](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture4-1569515878902.png)
 STEP 3:
 
 Then, select __App Service Build Service,__ the built-in pipeline provider Kudu, and specify the GitHub location (organization, repository and branch) of your code to setup the delivery pipeline by clicking on Continue.
-![picture5](/uploads/media/2019/8/picture5-1569515872332.png)
-![picture6](/uploads/media/2019/8/picture6-1569515866508.png)
-Finally, click Finish to confirm the setup of the delivery pipeline for your Azure Web App.![picture7](/uploads/media/2019/8/picture7-1569515859003.png)
-Once your web application build code repository is connected to your Azure Web App, Azure App Service build service provider (Kudu) does the rest for you. It auto-syncs code from the deployment source (GitHub) and executes a series of steps to build and get your application in a runnable state. Kudu will also auto-sync any future committed changes on the code into the Web App hosted in Azure App Service platform.![picture8](/uploads/media/2019/8/picture8-1569515852645.png)
-![picture9](/uploads/media/2019/8/picture9-1569515845266.png)
+![picture5](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture5-1569515872332.png)
+![picture6](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture6-1569515866508.png)
+Finally, click Finish to confirm the setup of the delivery pipeline for your Azure Web App.![picture7](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture7-1569515859003.png)
+Once your web application build code repository is connected to your Azure Web App, Azure App Service build service provider (Kudu) does the rest for you. It auto-syncs code from the deployment source (GitHub) and executes a series of steps to build and get your application in a runnable state. Kudu will also auto-sync any future committed changes on the code into the Web App hosted in Azure App Service platform.![picture8](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture8-1569515852645.png)
+![picture9](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture9-1569515845266.png)
 
 After a minute or so, you will see that your web application is deployed and published in Azure App Service. Click on the URL to access your web application from your browser.
-![picture10](/uploads/media/2019/8/picture10-1569515838569.png)
-![picture11](/uploads/media/2019/8/picture11-1569515830186.png)
+![picture10](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture10-1569515838569.png)
+![picture11](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/picture11-1569515830186.png)
 __It’s that easy!!!__
 
 We just explored one of the many methods you can use to set up a CI/CD pipeline and enable continuous deployment in Azure. I hope you will find this blog article helpful to quickly and easily deploy and test your web applications through the Azure App Service built-in pipeline orchestrator, Kudu. The [Azure App Service documentation](https://docs.microsoft.com/en-us/azure/app-service/) will provide you with all of the information you need to jumpstart your knowledge of Azure App Service and Azure continuous deployment services, such as Kudu build service or Azure DevOps pipelines. 

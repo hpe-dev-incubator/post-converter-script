@@ -122,7 +122,7 @@ svc-spark221e2-worker-d9892-1       NodePort     10.110.88.221     <none>       
 ```
 Pointing the browser at port 31533 connects to the Spark Master UI:
 
-![kubedirector](/uploads/media/2019/8/kubedirector-1568051725410.png)
+![kubedirector](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/kubedirector-1568051725410.png)
 That’s all there is to it! In fact, in the example above we also deployed a Jupyter notebook along with the Spark cluster.
 
 To start another application (e.g. Cassandra), just specify another KubeDirectorApp file:

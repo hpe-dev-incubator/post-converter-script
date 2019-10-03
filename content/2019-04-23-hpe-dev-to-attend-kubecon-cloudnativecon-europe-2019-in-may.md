@@ -5,7 +5,7 @@ author: Didier Lalli
 tags: []
 path: hpe-dev-to-attend-kubecon-cloudnativecon-europe-2019-in-may
 ---
-![5bf2e1a0cd93d0796238ae01-blog-content-1556049624648](/uploads/media/2019/4/picture1-1556049624644.png)
+![5bf2e1a0cd93d0796238ae01-blog-content-1556049624648](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/4/picture1-1556049624644.png)
   
 
 # HPE DEV to attend KubeCon + CloudNativeCon Europe 2019 in May

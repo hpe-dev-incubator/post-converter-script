@@ -28,16 +28,16 @@ For more information, refer to the **HPE 3PAR Storeserv Storage Concepts Guide**
 
 The first steps to setting up your 3PAR for multi-tenancy is to create a new virtual domain. Currently the configuration of Domains/Users can only done within the SSMC or via the 3PAR CLI (using **createdomain \<domain\>**, **createuser \<username\> \<domainname\> \<role\>** ). The example shown below will be done within the SSMC.
 
-1. Login into the SSMC with Super user access.  ![SSMC login](/uploads/media/2018/9/ssmc_login-1538420080349.jpg)
-2. In the mega menu, click **Show All > Domains**![3PAR domains](/uploads/media/2018/9/3par_domains-1538420435371.jpg)
-3. Click **Create domain**![domains](/uploads/media/2018/9/3par_domains_create-1538420530820.jpg)
+1. Login into the SSMC with Super user access.  ![SSMC login](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/ssmc_login-1538420080349.jpg)
+2. In the mega menu, click **Show All > Domains**![3PAR domains](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/3par_domains-1538420435371.jpg)
+3. Click **Create domain**![domains](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/3par_domains_create-1538420530820.jpg)
 4. Enter the name of the domain. In this example, `bob_domain`. Then click **Add systems**. Specify the **3PAR** where the domain will be created. Once complete, click **Create**.<a name="bob"></a>
 
->You may ask why I am using Bob, because everyone knows Bob is cool!<a name="bob"></a>![create domain](/uploads/media/2018/9/3par_domains_create_bob_65-1538420610188.jpg)
-5. In the mega menu, click **Show All > Users**![users](/uploads/media/2018/9/3par_users_menu-1538420664979.jpg)
-6. Click **Create User**![create user](/uploads/media/2018/9/create_user-1538420731817.jpg)
-7. Specify the **NEW** user name and password![create bob_user](/uploads/media/2018/9/create_user_bob_65-1538420769787.jpg)
-8. Click **Add Authorizations**, choose the domain created previously (`bob_domain` on **virt-3par** system). Choose the **edit** Role for the user. Click Add.![authorization](/uploads/media/2018/9/add_authorization-1538420815894.jpg)
+>You may ask why I am using Bob, because everyone knows Bob is cool!<a name="bob"></a>![create domain](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/3par_domains_create_bob_65-1538420610188.jpg)
+5. In the mega menu, click **Show All > Users**![users](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/3par_users_menu-1538420664979.jpg)
+6. Click **Create User**![create user](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/create_user-1538420731817.jpg)
+7. Specify the **NEW** user name and password![create bob_user](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/create_user_bob_65-1538420769787.jpg)
+8. Click **Add Authorizations**, choose the domain created previously (`bob_domain` on **virt-3par** system). Choose the **edit** Role for the user. Click Add.![authorization](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/add_authorization-1538420815894.jpg)
 ### Repeat these steps as necessary to configure additional Domains and Users within your 3PAR.
 
 
@@ -537,11 +537,11 @@ Now let's verify that these volumes have been exported to the Host.
 
 1. Log into the **SSMC** as `bob_user`
 
-2. Click on **Virtual Volumes**. You should see 3 volumes and also see that they are successfully exported to **scom.virtware.co**![Success SSMC](/uploads/media/2018/9/ssmc_success-1538420946527.jpg)
+2. Click on **Virtual Volumes**. You should see 3 volumes and also see that they are successfully exported to **scom.virtware.co**![Success SSMC](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/ssmc_success-1538420946527.jpg)
 
 Now let's check **scom.virtware.co**
 
->You may need to perform a **Rescan Disks** to see the new volumes.![Success SCOM](/uploads/media/2018/9/scom_success-1538421007139.jpg)
+>You may need to perform a **Rescan Disks** to see the new volumes.![Success SCOM](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/scom_success-1538421007139.jpg)
 You should be able to see all of the volumes available to the Windows Server.
 
 

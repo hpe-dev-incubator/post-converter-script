@@ -5,7 +5,7 @@ author: Pramod Sareddy
 tags: []
 path: using-open-service-broker-as-a-quick-and-easy-way-to-offer-everything-as
 ---
-![everything as a service 2](/uploads/media/2019/8/everything-as-a-service-2-1568045844717.png)
+![everything as a service 2](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/everything-as-a-service-2-1568045844717.png)
 Service brokers can be very helpful in delivering applications, development environments, or anything as-a-Service. Before the use of service brokers, setting up a development environment as-a-Service required a lot of time and manual effort. Service brokers compliant with the Open Service Broker (OSB) API specification can intuitively provision a new instance of a service they offer and provide all of the information your app or container needs to connect to it.
 
 OSB packages all the pieces required for communication between the service provider and the consumer of that service, basically acting as the middle man who ensures clear communication and helps things work in a more automated way. Before OSB, developers had to download or create all the missing linkages. OSB eliminates that need.  

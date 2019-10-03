@@ -51,7 +51,7 @@ path: ${slug}
           currBlock.image.title ||
           currBlock.content ||
           'blog image';
-        mdString = `${mdString}![${alt}](${currBlock.image.path})\n`;
+        mdString = `${mdString}![${alt}](https://hpe-developer-portal.s3.amazonaws.com${currBlock.image.path})\n`;
       }
     }
   }

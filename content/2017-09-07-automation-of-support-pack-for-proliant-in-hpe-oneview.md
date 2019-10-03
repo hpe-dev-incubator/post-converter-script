@@ -43,7 +43,7 @@ applied to the designated server hardware, connections are made to the
 network infrastructure, and disks are carved automatically. One of the
 property of a server profile (or a server profile template) is the
 Firmware Baseline. The picture below shows options available for
-managing firmware baseline during the creation of a server profile.![shows options available for managing firmware baseline during the creation of a server profile](/uploads/media/2017/9/spp-sp-1504754621422.png)
+managing firmware baseline during the creation of a server profile.![shows options available for managing firmware baseline during the creation of a server profile](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-sp-1504754621422.png)
 So if a server profile also has the Firmware property set to a given
 baseline, this baseline will automatically be installed on the server
 hardware as part of the profile deployment. This offline technique
@@ -66,7 +66,7 @@ More information on custom SPP on https://spp.hpe.com/custom/
 In order to get an SPP to appear in the list of available SPP to choose
 from for server profile, it needs to be loaded in HPE OneView. The
 obvious and GUI-based option to do this is in HPE OneView Web Console
-Firmware Bundles page, as shown below:![HPE OneView Web Console Firmware Bundles page](/uploads/media/2017/9/spp-firmwarebundle-1504754856328.png)
+Firmware Bundles page, as shown below:![HPE OneView Web Console Firmware Bundles page](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-firmwarebundle-1504754856328.png)
 From there it is possible to load additional Firmware Bundle from SPP
 ISO images.
 
@@ -158,14 +158,14 @@ It is now time to save this PowerShell script and test it against an HPE
 OneView Appliance or a HPE Synergy Composer.
 
 Before we run our script, let us check the appliance baseline view
-(empty to start with):![HPE OneView Web Console Firmware Bundles page](/uploads/media/2017/9/spp-nofirmwarebundle-1504803548928.png)
-In our first run, we can say Y(es) to confirm upload:![Powershell console showing firmware bundle upload](/uploads/media/2017/9/spp-ps1-1504803751946.png)
-![Powershell console showing firmware bundle addition](/uploads/media/2017/9/spp-ps2-1504803760139.png)
-![Powershell console showing firmware bundle addition](/uploads/media/2017/9/spp-ps3-1504803766997.png)
-![Powershell console showing firmware bundle upload process complete](/uploads/media/2017/9/spp-ps4-1504803773690.png)
+(empty to start with):![HPE OneView Web Console Firmware Bundles page](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-nofirmwarebundle-1504803548928.png)
+In our first run, we can say Y(es) to confirm upload:![Powershell console showing firmware bundle upload](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-ps1-1504803751946.png)
+![Powershell console showing firmware bundle addition](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-ps2-1504803760139.png)
+![Powershell console showing firmware bundle addition](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-ps3-1504803766997.png)
+![Powershell console showing firmware bundle upload process complete](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-ps4-1504803773690.png)
 After the run, we can check in HPE OneView again, to see that the
-baseline is now loaded![Check Baseline is loaded through HPE OneView web console](/uploads/media/2017/9/spp-firmwarebundle-1504754856328.png)
+baseline is now loaded![Check Baseline is loaded through HPE OneView web console](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-firmwarebundle-1504754856328.png)
 In the second run, we are notified that baseline is already there. We
-can just say N(o) to exit:![Powershell console notifying that baseline is already there in the second run of the script](/uploads/media/2017/9/spp-ps5-1504803781691.png)
+can just say N(o) to exit:![Powershell console notifying that baseline is already there in the second run of the script](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2017/9/spp-ps5-1504803781691.png)
 &gt; **Note: be careful as HPE OneView modifies the filename of the bundle
 &gt; by replacing unwanted characters such as "." and spaces, by "\_"**

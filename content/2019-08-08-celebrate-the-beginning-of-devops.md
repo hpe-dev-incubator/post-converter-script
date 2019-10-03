@@ -5,7 +5,7 @@ author: Didier Lalli
 tags: ["DevOps","DevOpsDays","devopsdays-ghent-2019"]
 path: celebrate-the-beginning-of-devops
 ---
-![gearhead banner](/uploads/media/2019/8/gearhead-banner-1565283401379.png)
+![gearhead banner](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/gearhead-banner-1565283401379.png)
 Something very special is just around the corner--something of historic proportions. This October, in beautiful Ghent, Belgium, [DevOpsDays](https://devopsdays.org/) will be celebrating its [10th year anniversary](https://devopsdays.org/events/2019-ghent/welcome/) in the very place where the term DevOps was first coined. This is where software developers and ITOps staff first gathered to talk about the miscommunications between these two groups and looked for ways to get around the so-called [“Wall of Confusion”. ](https://sellegi.se/glossary/wall-of-confusion/)
 
 If you’re not familiar with DevOpsDays, it is a set of events that happens year-round throughout the world focusing on software development, IT operations, and the intersection between the two. This worldwide series of technical conferences grew out of the efforts of one man, Patrick Debois. 

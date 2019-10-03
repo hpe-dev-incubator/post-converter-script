@@ -5,7 +5,7 @@ author: HPE DEV staff
 tags: ["HPEDeveloperCommunity","HPEOneSphere","HPEOneView","HPEProLiantforMicrosoftAzureStack","HPESimpliVity","MSIgnite"]
 path: hpe-at-microsoft-ignite-event-september-24-27
 ---
-![hpe at ms ignite](/uploads/media/2018/9/hpe-at-ms-ignite-1536779956115.png)
+![hpe at ms ignite](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2018/9/hpe-at-ms-ignite-1536779956115.png)
 Hewlett Packard Enterprise (HPE) will be at the [Microsoft Ignite](https://www.microsoft.com/en-us/ignite) event, September 24th through 27th in Orlando, Florida. The event, which welcomes thousands of IT professionals each year, is a chance for HPE to showcase their latest innovative technologies. At the event, HPE will host several sessions and demos for attendees to get a chance to see technologies such as [HPE ProLiant for Microsoft Azure Stack](https://www.hpe.com/us/en/solutions/cloud/azure-hybrid-cloud.html), [HPE OneView](https://www.hpe.com/us/en/integrated-systems/software.html), [HPE OneSphere](https://www.hpe.com/us/en/solutions/cloud/hybrid-it-management.html), [HPE SimpliVity](https://www.hpe.com/us/en/integrated-systems/simplivity.html/) and the [HPE Developer Community](https://developer.hpe.com/) up-close. Below, find a list of the sessions HPE will host at the event.
 
 On Monday, September 24 at 5:45 PM, don’t miss [HPE Edgeline and Microsoft Azure powering the Intelligent Edge (THR1134)](https://myignite.techcommunity.microsoft.com/sessions/66918?source=sessions). Come hear how HPE and Microsoft are helping customers with the digital transformation of their business with HPE Edgeline Converged Edge Systems and Microsoft Azure innovation that spans the edge to the cloud
