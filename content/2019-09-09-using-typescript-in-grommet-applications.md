@@ -17,11 +17,13 @@ To get started, you might want to check out another blog in which Ian Bovard doe
 
 Assuming you already have a Grommet app, to add TypeScript to your Grommet application, all you need to do is cd into that project and run the following command. 
 
+
 ```
 yarn add typescript @types/node @types/react @types/react-dom @types/jest
 
 ``` 
 Or, if you are using npm, then use this instead:
+
 
 ```
 
@@ -38,6 +40,7 @@ As you go through your files, change the App.js to App.tsx. This will trigger th
 ![screen shot 2019 09 09 at 12.22.30 pm](https://hpe-developer-portal.s3.amazonaws.com/uploads/media/2019/8/screen-shot-2019-09-09-at-122230-pm-1568053417737.png)
 
 Following my own suggestion for this example, I will start with the Heading component that was used in [Ian’s blog:](https://developer.hpe.com/blog/using-your-first-grommet-component-with-create-react-app)
+
 
 ```
 

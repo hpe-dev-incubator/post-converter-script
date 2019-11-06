@@ -43,7 +43,31 @@ path: ${slug}
     for (let j = 0; section.contentBlocks.length > j; j += 1) {
       const currBlock = section.contentBlocks[j];
       if (currBlock.blockType === 'BlockParagraph') {
-        mdString = `${mdString}${currBlock.content}`;
+        const mdParagraph = currBlock.content;
+        const regex = /(```)/g;
+        let matchCount = -1;
+        let newMdParagraph = mdParagraph.replace(
+          regex,
+          (match, matchTwo, index) => {
+            console.log(match, matchTwo, index);
+            console.log(
+              'prev',
+              mdParagraph[index - 1],
+              'index',
+              mdParagraph[index],
+              'after',
+              mdParagraph[index + 1],
+            );
+            matchCount += 1;
+            if (matchCount % 2 === 0) {
+              return '\n```';
+            }
+
+            return match;
+          },
+        );
+        newMdParagraph = newMdParagraph.replace('<br/>', '');
+        mdString = `${mdString}${newMdParagraph}`;
       }
       if (currBlock.blockType === 'BlockImage' && currBlock.image) {
         const alt =
@@ -73,6 +97,7 @@ path: ${slug}
 
 getAllBlogPosts().then(({ posts }) => {
   for (let i = 0; posts.length > i; i += 1) {
+    // for (let i = 0; i === 0; i += 1) {
     createMdFromSlug(posts[i].slug);
   }
 });
