@@ -1,5 +1,5 @@
 ---
-title: Leveraging HPE OneView Single Sign On to iLO Management Processors
+title: "Blog"
 date: 2017-09-11T16:49:26.055Z
 author: Didier Lalli 
 tags: ["HPE-OneView","OneView","ILO"]

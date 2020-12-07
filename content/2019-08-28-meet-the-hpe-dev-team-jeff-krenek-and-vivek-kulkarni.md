@@ -1,5 +1,5 @@
 ---
-title: Meet the HPE DEV Team – Jeff Krenek and Vivek Kulkarni
+title: "Blog"
 date: 2019-08-28T15:56:28.937Z
 author: Dale Rensing 
 tags: []

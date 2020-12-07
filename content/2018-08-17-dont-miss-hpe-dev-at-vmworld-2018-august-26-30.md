@@ -1,5 +1,5 @@
 ---
-title: Don’t miss HPE DEV at VMWorld 2018, August 26-30
+title: "Blog"
 date: 2018-08-17T19:31:21.298Z
 author: HPE DEV 
 tags: ["vmworld-las-vegas-2018"]

@@ -9,16 +9,26 @@ const getAllBlogPosts = () =>
     .then(res => res.json())
     .then(data => data);
 
+const getExternalBlogPosts = () =>
+  fetch(`${apiUrl}/contributions?type=blog&page=1&count=1000`)
+    .then(res => res.json())
+    .then(data => data);
+
 const getBlogPost = async slug =>
   fetch(`${apiUrl}/post/title/${slug} `)
+    .then(res => res.json())
+    .then(data => data);
+
+const getExternalBlogPost = async hashId =>
+  fetch(`${apiUrl}/contributions/blog/${hashId} `)
     .then(res => res.json())
     .then(data => data);
 
 const createMdFromSlug = async slug => {
   const postData = await getBlogPost(slug);
   const contentSections = postData.updatedSections || postData.sections;
-  // Colons in the title break frontmatter. Use encoded entity instead.
-  const postTitle = postData.title.replace(':', '&#58;');
+  // Colons in the title break frontmatter. Use quotes instead.
+  const postTitle = JSON.stringify(postData.pageType.title);
   let tagsString = '[';
   // Use ternary for empty string conditionals in template literal otherwise
   // false will print to the string.
@@ -95,9 +105,58 @@ path: ${slug}
   });
 };
 
+const createMdFromHashID = async hashId => {
+  const postData = await getExternalBlogPost(hashId);
+  const content = postData.content.replace(
+    /\/uploads\/media+/g,
+    'https://hpe-developer-portal.s3.amazonaws.com/uploads/media',
+  );
+  // Colons in the title break frontmatter. Use quotes instead.
+  const postTitle = JSON.stringify(postData.title);
+  const blogSlug = /[^/]*$/.exec(postData.slug)[0];
+  // const blogpath = `${hashId}/${blogSlug}`;
+  const authorName = postData.member.firstName + ' ' + postData.member.lastName;
+  let tagsString = '[';
+  // Use ternary for empty string conditionals in template literal otherwise
+  // false will print to the string.
+  postData.tags.forEach(
+    (tag, index) =>
+      (tagsString = `${tagsString}${index > 0 ? ',' : ''}"${tag}"${
+        index === postData.tags.length - 1 ? ']' : ''
+      }`),
+  );
+  // Convert the post to a markdown string
+  let mdString = `---
+title: ${postTitle}
+date: ${postData.createdAt}
+author: ${authorName || 'HPE DEV staff'} 
+tags: ${postData.tags.length ? tagsString : '[]'}
+path: ${blogSlug}
+---
+`;
+
+  mdString = `${mdString}${content}`;
+
+  // Name and create the file
+  const postDate = new Date(postData.createdAt).toISOString().slice(0, 10);
+  const filename = `${postDate}-${blogSlug.substring(0, 256)}.md`;
+  const filePath = path.join('content', filename);
+  fs.writeFile(filePath, mdString, err => {
+    if (err) throw err;
+    console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
+  });
+};
+
 getAllBlogPosts().then(({ posts }) => {
   for (let i = 0; posts.length > i; i += 1) {
     // for (let i = 0; i === 0; i += 1) {
     createMdFromSlug(posts[i].slug);
+  }
+});
+
+getExternalBlogPosts().then(({ posts }) => {
+  for (let i = 0; posts.length > i; i += 1) {
+    // for (let i = 0; i === 0; i += 1) {
+    createMdFromHashID(posts[i].hashId);
   }
 });

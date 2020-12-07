@@ -1,5 +1,5 @@
 ---
-title: HPE+SUSE reprise their Redfish Workshop in Lyon, France in October
+title: "Blog"
 date: 2019-09-25T15:21:20.112Z
 author: Bruno Cornec 
 tags: []

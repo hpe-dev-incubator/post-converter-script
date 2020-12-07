@@ -1,5 +1,5 @@
 ---
-title: How to change the factory generated iLO Administrator password
+title: "Blog"
 date: 2018-03-29T15:34:24.958Z
 author: François Donzé 
 tags: ["iLO","Redfish","ilorest"]
