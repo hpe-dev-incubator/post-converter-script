@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Think container first"
 date: 2019-12-05T17:13:30.366Z
 author: Dale Rensing 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform","bluedata"]

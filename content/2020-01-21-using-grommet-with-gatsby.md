@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Using Grommet with Gatsby"
 date: 2020-01-21T17:34:14.734Z
 author:  Michael Kingdom 
 tags: ["grommet","opensource"]

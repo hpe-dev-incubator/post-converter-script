@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Master the automation universe the easy way! Part 1: Introduction to StackStorm"
 date: 2020-06-22T07:20:59.673Z
 author: Rick Kauffman 
 tags: ["automation","StackStorm","opensource"]

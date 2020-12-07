@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Building Dynamic Machine Learning Pipelines with KubeDirector"
 date: 2020-08-14T10:58:54.949Z
 author: Joel Baxter & Kartik Mathur & Don Wake 
 tags: ["hpe-ezmeral-container-platform","MLOps","pipeline","kubedirector","opensource"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE DEV and the new HPE Container Platform at KubeCon 2019"
 date: 2019-12-04T20:27:38.907Z
 author: Denis Choukroun & Pramod Reddy-Sareddy 
 tags: []

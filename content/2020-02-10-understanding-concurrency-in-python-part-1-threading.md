@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Understanding Concurrency in Python Part 1 - Threading"
 date: 2020-02-10T22:17:20.233Z
 author: Samarth Deyagond 
 tags: ["Python"]

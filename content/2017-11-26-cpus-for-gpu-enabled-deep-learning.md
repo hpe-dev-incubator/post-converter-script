@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "CPUs for GPU-enabled deep learning"
 date: 2017-11-26T09:48:58.426Z
 author: Sergey Serebryakov 
 tags: ["deep-learning-cookbook"]

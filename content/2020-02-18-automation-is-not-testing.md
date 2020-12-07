@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Automation is not testing"
 date: 2020-02-18T17:55:26.750Z
 author: Chris Young 
 tags: []

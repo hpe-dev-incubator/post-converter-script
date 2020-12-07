@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "See Where You Can Find The Open Source UI Tool, Grommet, at HPE Discover"
 date: 2019-05-23T17:43:56.071Z
 author: Dale Rensing 
 tags: ["Grommet","opensource"]

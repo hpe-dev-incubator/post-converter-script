@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Using the SimpliVity API with Java"
 date: 2018-08-03T16:27:34.727Z
 author: HPE DEV staff 
 tags: ["hpe-simplivity.java","api"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "From Developer to Manager to Freight Captain"
 date: 2019-04-17T19:35:59.548Z
 author: Alex Mejias, UX Development Manager 
 tags: []

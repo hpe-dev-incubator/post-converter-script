@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Second internal HPE Hackathon around IoT and AI"
 date: 2020-03-05T18:11:36.248Z
 author: Marcel Jakob 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform"]

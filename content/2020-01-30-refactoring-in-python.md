@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Refactoring in Python"
 date: 2020-01-30T22:57:21.363Z
 author: Samarth Deyagond 
 tags: ["Python"]

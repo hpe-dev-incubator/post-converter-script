@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "10th anniversary of DevOps Days celebrated in Ghent"
 date: 2019-11-14T15:56:42.408Z
 author: Didier Lalli 
 tags: ["DevOps"]

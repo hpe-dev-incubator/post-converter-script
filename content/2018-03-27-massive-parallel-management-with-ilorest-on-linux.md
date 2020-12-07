@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Massive parallel management with ilorest on Linux"
 date: 2018-03-27T09:38:05.684Z
 author: François Donzé - Technical consultant 
 tags: ["ilo-restful-api","Redfish","iLO"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Using TypeScript in Grommet Applications"
 date: 2019-09-09T18:08:08.659Z
 author: Brittany Archibeque 
 tags: ["Grommet","opensource"]

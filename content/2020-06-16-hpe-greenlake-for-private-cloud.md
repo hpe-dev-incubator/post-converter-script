@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE GreenLake for private cloud"
 date: 2020-06-16T10:51:11.005Z
 author: Steve Showalter & Thavamaniraja S 
 tags: ["hpe-greenlake"]

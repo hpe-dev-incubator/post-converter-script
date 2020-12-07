@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Use Grommet Face Detection and Microsoft Azure Cognitive Services to identify people in pictures"
 date: 2019-11-01T02:40:45.562Z
 author: Pramod Sareddy 
 tags: ["grommet","opensource"]

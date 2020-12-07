@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "New HPE OneView Ansible Module v5.4.0 includes support for HPE OneView 5.0"
 date: 2020-02-07T18:29:39.773Z
 author: Chris Pasek 
 tags: ["HPE-OneView","OneView","Ansible"]

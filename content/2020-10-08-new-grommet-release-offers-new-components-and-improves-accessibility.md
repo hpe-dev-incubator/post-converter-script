@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "New Grommet release offers new components and improves accessibility"
 date: 2020-10-08T16:15:08.059Z
 author: Shimi Yacobi 
 tags: ["grommet","react","opensource"]

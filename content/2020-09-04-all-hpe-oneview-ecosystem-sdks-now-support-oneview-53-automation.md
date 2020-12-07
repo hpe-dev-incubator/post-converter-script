@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "All HPE OneView Ecosystem SDKs now support OneView 5.3 automation"
 date: 2020-09-04T06:50:36.903Z
 author: Chris Pasek 
 tags: ["hpe-oneview","devops","automation"]

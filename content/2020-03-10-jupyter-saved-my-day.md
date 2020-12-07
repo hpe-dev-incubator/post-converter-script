@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Jupyter saved my day"
 date: 2020-03-10T20:48:19.809Z
 author: Frederic Passeron 
 tags: ["opensource","jupyter","notebook"]

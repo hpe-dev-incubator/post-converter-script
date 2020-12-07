@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "How to Register a Grommet OSB Broker in a Kubernetes Service Catalog"
 date: 2019-08-21T18:44:52.096Z
 author: Pramod Sareddy 
 tags: ["grommet","opensource"]

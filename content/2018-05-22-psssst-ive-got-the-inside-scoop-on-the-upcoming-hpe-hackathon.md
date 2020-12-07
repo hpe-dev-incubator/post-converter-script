@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Psssst: I’ve got the inside scoop on the upcoming HPE Hackathon "
 date: 2018-05-22T14:00:54.357Z
 author: HPE DEV staff 
 tags: ["hackathon","hpe-onesphere","community"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Say NO to (Cloud) Vendor Lock-in!"
 date: 2019-09-03T17:13:05.705Z
 author: Didier Lalli 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform"]

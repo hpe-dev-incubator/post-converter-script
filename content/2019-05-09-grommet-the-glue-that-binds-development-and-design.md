@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Grommet – the Glue that Binds Development and Design"
 date: 2019-05-09T14:59:02.506Z
 author: Dale Rensing 
 tags: ["Grommet","opensource"]

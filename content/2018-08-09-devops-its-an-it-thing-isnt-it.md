@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: " DevOps – It’s an IT thing, isn’t it?"
 date: 2018-08-09T16:13:21.978Z
 author: Mario Devargas 
 tags: ["DevOps","business"]

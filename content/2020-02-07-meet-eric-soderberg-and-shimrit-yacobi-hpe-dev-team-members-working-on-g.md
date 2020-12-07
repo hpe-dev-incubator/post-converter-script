@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Meet Eric Soderberg and Shimrit Yacobi - HPE DEV Team Members working on Grommet "
 date: 2020-02-07T18:33:36.735Z
 author: Dale Rensing 
 tags: ["grommet"]

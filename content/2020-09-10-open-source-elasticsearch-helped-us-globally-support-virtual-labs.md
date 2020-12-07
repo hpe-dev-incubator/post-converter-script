@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Open source Elasticsearch helped us globally support virtual labs"
 date: 2020-09-10T14:39:09.439Z
 author: Didier Lalli 
 tags: ["opensource","elasticsearch","elk"]

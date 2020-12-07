@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE firmware updates: Part 1 – File types and Smart Components"
 date: 2020-08-21T15:07:31.534Z
 author: François Donzé 
 tags: ["ilo-restful-api","firmware","uefi","redfish"]

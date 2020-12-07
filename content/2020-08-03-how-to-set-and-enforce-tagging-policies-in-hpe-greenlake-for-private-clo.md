@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "How to set and enforce tagging policies in HPE GreenLake for private cloud"
 date: 2020-08-03T13:15:13.523Z
 author: Thavamaniraja S 
 tags: ["hpe-greenlake"]

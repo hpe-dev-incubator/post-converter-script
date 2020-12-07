@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "New HPE DEV leadership team discusses program focus and expansion"
 date: 2019-12-09T16:10:49.721Z
 author: Dale Rensing 
 tags: []

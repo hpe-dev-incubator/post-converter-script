@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "A behind the scenes look into the projects of the HPE Hackathon"
 date: 2018-05-24T20:29:14.193Z
 author: HPE DEV staff 
 tags: ["hackathon","hpe-onesphere","community"]

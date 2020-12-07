@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE OneView RUBY SDK now available with support for HPE OneView 5.0"
 date: 2020-03-19T19:59:13.435Z
 author: Christopher Pasek 
 tags: ["hpe-oneview"]

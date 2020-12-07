@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE OneView 5.4 Ecosystem SDKs introduce new methods for ILO configuration and default API versioning"
 date: 2020-10-13T18:55:34.129Z
 author: Chris Pasek 
 tags: ["hpe-oneview","devops","automation"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "KubeDirector: The easy way to run complex stateful applications on Kubernetes"
 date: 2019-09-09T17:42:49.847Z
 author: Tom Phelan 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform","bluedata","container","opensource"]

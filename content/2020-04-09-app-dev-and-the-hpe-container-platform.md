@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "App DEV and the HPE Container Platform"
 date: 2020-04-09T15:41:06.174Z
 author: Dale Rensing 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform","opensource"]

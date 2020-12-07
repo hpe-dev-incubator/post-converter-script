@@ -28,7 +28,7 @@ const createMdFromSlug = async slug => {
   const postData = await getBlogPost(slug);
   const contentSections = postData.updatedSections || postData.sections;
   // Colons in the title break frontmatter. Use quotes instead.
-  const postTitle = JSON.stringify(postData.pageType.title);
+  const postTitle = JSON.stringify(postData.title);
   let tagsString = '[';
   // Use ternary for empty string conditionals in template literal otherwise
   // false will print to the string.

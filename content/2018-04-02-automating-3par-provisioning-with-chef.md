@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Automating 3PAR provisioning with Chef"
 date: 2018-04-02T08:46:25.782Z
 author: Chris Snell 
 tags: ["chef","hpe-3par","storeserv","cookbook","devops","configuration-management","hpe-3par-and-primera"]

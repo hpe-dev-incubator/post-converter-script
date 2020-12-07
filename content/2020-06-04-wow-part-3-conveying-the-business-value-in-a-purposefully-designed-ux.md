@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "WOW - Part 3 - Conveying the business value in a purposefully designed UX"
 date: 2020-06-04T16:59:57.062Z
 author: Parul Tyagi 
 tags: []

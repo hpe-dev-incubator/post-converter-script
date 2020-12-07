@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "The neuroscience behind a design system"
 date: 2020-05-13T14:53:52.695Z
 author: Taylor Seamans 
 tags: []

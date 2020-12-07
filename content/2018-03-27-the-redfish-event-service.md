@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "The Redfish® Event Service"
 date: 2018-03-27T15:17:22.504Z
 author: François Donzé - Technical consultant 
 tags: ["ilo-restful-api","Redfish","iLO"]

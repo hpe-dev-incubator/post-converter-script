@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Celebrate the beginning of DevOps"
 date: 2019-08-08T16:30:30.933Z
 author: Didier Lalli 
 tags: ["DevOps","DevOpsDays","devopsdays-ghent-2019"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE Hackathon builds greater competency in IoT and AI "
 date: 2019-11-06T18:12:07.794Z
 author: HPE DEV staff 
 tags: []

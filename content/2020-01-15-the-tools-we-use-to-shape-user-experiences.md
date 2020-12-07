@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "The Tools We Use to Shape User Experiences"
 date: 2020-01-15T21:15:44.891Z
 author: Jonathan Weber 
 tags: []

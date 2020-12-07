@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Get involved in the open source community! Part 3: Contributing back to the community"
 date: 2020-06-24T08:06:31.204Z
 author: Didier Lalli 
 tags: ["git","github","opensource"]

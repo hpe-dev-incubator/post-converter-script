@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Getting Started with the Redfish® API Part 2"
 date: 2017-11-20T22:32:49.078Z
 author: Mike Garrett- Architect iLO RESTful API 
 tags: ["ilo-restful-api","redfish"]

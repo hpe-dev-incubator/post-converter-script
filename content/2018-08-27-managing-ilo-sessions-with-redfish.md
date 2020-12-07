@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Managing iLO sessions with Redfish"
 date: 2018-08-27T13:44:46.463Z
 author: François Donzé 
 tags: ["ilo-restful-api","Redfish","iLO5","iLOsessionmanagement"]

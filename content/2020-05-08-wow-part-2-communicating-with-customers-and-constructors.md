@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "WOW - Part 2: Communicating with customers and constructors"
 date: 2020-05-08T16:40:10.080Z
 author: Parul Tyagi, Manager -  Experience Design 
 tags: []

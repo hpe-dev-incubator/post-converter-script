@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Container Images for HPE OneView SDKs are now available"
 date: 2020-07-13T18:18:16.000Z
 author: Christopher Pasek 
 tags: ["hpe-oneview","containers"]

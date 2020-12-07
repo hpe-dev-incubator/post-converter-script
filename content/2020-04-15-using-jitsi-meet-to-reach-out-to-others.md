@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Using Jitsi Meet to reach out to others"
 date: 2020-04-15T21:37:50.843Z
 author: Frederic Passeron 
 tags: ["opensource"]

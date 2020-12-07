@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE OneView Puppet Module v2.4.0 now supports HPE OneView 5.0"
 date: 2020-03-19T19:56:04.411Z
 author: Christopher Pasek 
 tags: ["hpe-oneview"]

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Understanding Concurrency in Python Part 2 - Multiprocessing"
 date: 2020-02-19T17:23:08.924Z
 author: Samarth Deyagond 
 tags: []

@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "WOW – A practiced and perfected design process  Part 1 – Uncovering the merit of UX design to projects"
 date: 2020-04-13T17:45:00.133Z
 author: Parul Tyagi 
 tags: []

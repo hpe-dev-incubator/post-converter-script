@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "Insights from HPE DEV at Microsoft Ignite 2019 "
 date: 2019-11-20T17:04:41.170Z
 author: Pramod Sareddy 
 tags: []

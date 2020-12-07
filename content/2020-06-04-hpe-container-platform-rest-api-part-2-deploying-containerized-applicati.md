@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "HPE Container Platform REST API – Part 2: Deploying containerized applications"
 date: 2020-06-04T16:41:01.009Z
 author: Denis Choukroun 
 tags: ["hpe-ezmeral-container-platform","hpe-container-platform"]

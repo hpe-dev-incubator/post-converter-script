@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "The Power of Single Sign-On with HPE OneView"
 date: 2019-07-11T19:44:24.540Z
 author: Vincent Berger 
 tags: ["HPEOneView"]
