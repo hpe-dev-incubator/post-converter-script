@@ -2,6 +2,19 @@ import fetch from 'isomorphic-fetch';
 import fs from 'fs';
 import path from 'path';
 
+const contentdir = './content';
+const opensourcedir = './content/opensource';
+const blogdir = './content/blogs';
+if (!fs.existsSync(contentdir)) {
+  fs.mkdirSync(contentdir);
+}
+if (!fs.existsSync(opensourcedir)) {
+  fs.mkdirSync(opensourcedir);
+}
+if (!fs.existsSync(blogdir)) {
+  fs.mkdirSync(blogdir);
+}
+
 const apiUrl = 'https://developer.hpe.com/dashboard/api';
 
 const getAllBlogPosts = () =>
@@ -21,6 +34,11 @@ const getBlogPost = async slug =>
 
 const getExternalBlogPost = async hashId =>
   fetch(`${apiUrl}/contributions/blog/${hashId} `)
+    .then(res => res.json())
+    .then(data => data);
+
+const getOpenSourceProjects = () =>
+  fetch(`${apiUrl}/post/title/projects`)
     .then(res => res.json())
     .then(data => data);
 
@@ -96,9 +114,8 @@ path: ${slug}
   }
 
   // Name and create the file
-  const postDate = new Date(postData.date).toISOString().slice(0, 10);
-  const filename = `${postDate}-${postData.slug.substring(0, 256)}.md`;
-  const filePath = path.join('content', filename);
+  const filename = `${postData.slug.substring(0, 256)}.md`;
+  const filePath = path.join('content/blogs', filename);
   fs.writeFile(filePath, mdString, err => {
     if (err) throw err;
     console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
@@ -138,13 +155,49 @@ path: ${blogSlug}
   mdString = `${mdString}${content}`;
 
   // Name and create the file
-  const postDate = new Date(postData.createdAt).toISOString().slice(0, 10);
-  const filename = `${postDate}-${blogSlug.substring(0, 256)}.md`;
-  const filePath = path.join('content', filename);
+  const filename = `${blogSlug.substring(0, 256)}.md`;
+  const filePath = path.join('content/blogs', filename);
   fs.writeFile(filePath, mdString, err => {
     if (err) throw err;
     console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
   });
+};
+
+const createMdFromProjects = async projects => {
+  const postData = projects;
+  const contentSections = postData.updatedSections || postData.sections;
+
+  for (let i = 0; contentSections.length > i; i += 1) {
+    const section = contentSections[i];
+    for (let j = 0; section.contentBlocks.length > j; j += 1) {
+      const currBlock = section.contentBlocks[j];
+      if (currBlock.blockType === 'BlockTileCard') {
+        const projectTitle = JSON.stringify(currBlock.card.heading);
+        const category = currBlock.card.label
+          .replace(/\ /g, '')
+          .split('-')
+          .pop();
+        // Convert the project to a markdown string
+        let mdString = `---
+          title: ${projectTitle}
+          category: ${category}
+          link: ${currBlock.card.linkUrl}
+          description: ${currBlock.card.content}
+          priority: ${j}
+          image: '/img/opensource/spiffe.svg'
+---
+          `;
+        // Name and create the file
+        let heading = currBlock.card.heading.replace(/\ /g, '_');
+        const filename = `${heading.substring(0, 256)}.md`;
+        const filePath = path.join('content/opensource', filename);
+        fs.writeFile(filePath, mdString, err => {
+          if (err) throw err;
+          console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
+        });
+      }
+    }
+  }
 };
 
 getAllBlogPosts().then(({ posts }) => {
@@ -159,4 +212,8 @@ getExternalBlogPosts().then(({ posts }) => {
     // for (let i = 0; i === 0; i += 1) {
     createMdFromHashID(posts[i].hashId);
   }
+});
+
+getOpenSourceProjects().then(projects => {
+  createMdFromProjects(projects);
 });
