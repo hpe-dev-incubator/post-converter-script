@@ -180,6 +180,10 @@ const createMdFromProjects = async projects => {
       const currBlock = section.contentBlocks[j];
       if (currBlock.blockType === 'BlockTileCard') {
         const projectTitle = JSON.stringify(currBlock.card.heading);
+        const link =
+          currBlock.card.linkUrl === ''
+            ? currBlock.card.links[0].url
+            : currBlock.card.linkUrl;
         const category = currBlock.card.label
           .replace(/\ /g, '')
           .split('-')
@@ -188,7 +192,7 @@ const createMdFromProjects = async projects => {
         let mdString = `---
           title: ${projectTitle}
           category: ${category}
-          link: ${currBlock.card.linkUrl}
+          link: ${link}
           description: ${currBlock.card.content}
           priority: ${j}
           image: '/img/opensource/spiffe.svg'
