@@ -5,6 +5,7 @@ import path from 'path';
 const contentdir = './content';
 const opensourcedir = './content/opensource';
 const blogdir = './content/blogs';
+const newsletterArchivedir = './content/newsletter-archive';
 if (!fs.existsSync(contentdir)) {
   fs.mkdirSync(contentdir);
 }
@@ -13,6 +14,9 @@ if (!fs.existsSync(opensourcedir)) {
 }
 if (!fs.existsSync(blogdir)) {
   fs.mkdirSync(blogdir);
+}
+if (!fs.existsSync(newsletterArchivedir)) {
+  fs.mkdirSync(newsletterArchivedir);
 }
 
 const apiUrl = 'https://developer.hpe.com/dashboard/api';
@@ -207,6 +211,50 @@ const createMdFromProjects = async projects => {
   }
 };
 
+function monthDiff(dateFrom, dateTo) {
+  return (
+    dateTo.getMonth() -
+    dateFrom.getMonth() +
+    12 * (dateTo.getFullYear() - dateFrom.getFullYear()) +
+    2
+  );
+}
+
+const createMdFromNewsletterArchive = async slug => {
+  const postData = await getBlogPost(slug);
+  const contentSections = postData.updatedSections || postData.sections;
+  const startDate = new Date(2018, 8);
+  for (let i = 0; contentSections.length > i; i += 1) {
+    const section = contentSections[i];
+    for (let j = 0; section.contentBlocks.length > j; j += 1) {
+      const currBlock = section.contentBlocks[j];
+      if (currBlock.blockType === 'BlockTileCard') {
+        const dateArr = currBlock.card.label.replace(/,/g, '').split(' ');
+        const currentDate = new Date(currBlock.card.label);
+        // Calculate newsletter number
+        const months = monthDiff(startDate, currentDate);
+
+        // Convert the project to a markdown string
+        let mdString = `---
+title: ${JSON.stringify(currBlock.card.heading)}
+date: ${new Date(currBlock.card.label).toISOString()}
+link: ${currBlock.card.links[0].url}
+description: ${currBlock.card.content.replace(/\s/g, ' ')}
+monthly: ${months}
+---
+            `;
+        // Name and create the file
+        const filename = `${dateArr[2]}-${dateArr[0]}-${dateArr[1]}.md`;
+        const filePath = path.join('content/newsletter-archive', filename);
+        fs.writeFile(filePath, mdString, err => {
+          if (err) throw err;
+          console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
+        });
+      }
+    }
+  }
+};
+
 getAllBlogPosts().then(({ posts }) => {
   for (let i = 0; posts.length > i; i += 1) {
     // for (let i = 0; i === 0; i += 1) {
@@ -224,3 +272,5 @@ getExternalBlogPosts().then(({ posts }) => {
 getOpenSourceProjects().then(projects => {
   createMdFromProjects(projects);
 });
+
+createMdFromNewsletterArchive('newsletter-archive-feed');
