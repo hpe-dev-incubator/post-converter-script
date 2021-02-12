@@ -5,6 +5,7 @@ import path from 'path';
 const contentdir = './content';
 const opensourcedir = './content/opensource';
 const blogdir = './content/blogs';
+const externalblogdir = './content/externalblogs';
 const newsletterArchivedir = './content/newsletter-archive';
 if (!fs.existsSync(contentdir)) {
   fs.mkdirSync(contentdir);
@@ -14,6 +15,9 @@ if (!fs.existsSync(opensourcedir)) {
 }
 if (!fs.existsSync(blogdir)) {
   fs.mkdirSync(blogdir);
+}
+if (!fs.existsSync(externalblogdir)) {
+  fs.mkdirSync(externalblogdir);
 }
 if (!fs.existsSync(newsletterArchivedir)) {
   fs.mkdirSync(newsletterArchivedir);
@@ -62,6 +66,19 @@ const createMdFromSlug = async slug => {
           index === postData.tags.length - 1 ? ']' : ''
         }`),
     );
+    // pick a random author image from the avathar list
+    const avathars = [
+      '/img/blogs/Avatar1.svg',
+      '/img/blogs/Avatar2.svg',
+      '/img/blogs/Avatar3.svg',
+      '/img/blogs/Avatar4.svg',
+      '/img/blogs/Avatar5.svg',
+      '/img/blogs/Avatar6.svg',
+    ];
+
+    const random = Math.floor(Math.random() * avathars.length);
+    const authorimage = JSON.stringify(avathars[random]);
+
     // Convert the post to a markdown string
     let mdString = `---
 title: ${postTitle}
@@ -69,6 +86,7 @@ date: ${postData.date}
 author: ${postData.author || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
 path: ${slug}
+authorimage: ${authorimage}
 ---
 `;
 
@@ -83,15 +101,15 @@ path: ${slug}
           let newMdParagraph = mdParagraph.replace(
             regex,
             (match, matchTwo, index) => {
-              console.log(match, matchTwo, index);
-              console.log(
-                'prev',
-                mdParagraph[index - 1],
-                'index',
-                mdParagraph[index],
-                'after',
-                mdParagraph[index + 1],
-              );
+              // console.log(match, matchTwo, index);
+              // console.log(
+              //   'prev',
+              //   mdParagraph[index - 1],
+              //   'index',
+              //   mdParagraph[index],
+              //   'after',
+              //   mdParagraph[index + 1],
+              // );
               matchCount += 1;
               if (matchCount % 2 === 0) {
                 return '\n```';
@@ -132,7 +150,7 @@ path: ${slug}
 const createMdFromHashID = async hashId => {
   const postData = await getExternalBlogPost(hashId);
   // fetch blogs which are only released
-  if (postData.status === 'release') {
+  if (postData.status === 'PUBLISHED') {
     const content = postData.content.replace(
       /\/uploads\/media+/g,
       'https://hpe-developer-portal.s3.amazonaws.com/uploads/media',
@@ -152,6 +170,19 @@ const createMdFromHashID = async hashId => {
           index === postData.tags.length - 1 ? ']' : ''
         }`),
     );
+    // pick a random author image from the avathar list
+    const avathars = [
+      '/img/blogs/Avatar1.svg',
+      '/img/blogs/Avatar2.svg',
+      '/img/blogs/Avatar3.svg',
+      '/img/blogs/Avatar4.svg',
+      '/img/blogs/Avatar5.svg',
+      '/img/blogs/Avatar6.svg',
+    ];
+
+    const random = Math.floor(Math.random() * avathars.length);
+    const authorimage = JSON.stringify(avathars[random]);
+
     // Convert the post to a markdown string
     let mdString = `---
 title: ${postTitle}
@@ -159,14 +190,16 @@ date: ${postData.createdAt}
 author: ${authorName || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
 path: ${blogSlug}
+authorimage: ${authorimage}
 ---
 `;
 
     mdString = `${mdString}${content}`;
+    console.log('postTitle', postTitle);
 
     // Name and create the file
     const filename = `${blogSlug.substring(0, 256)}.md`;
-    const filePath = path.join('content/blogs', filename);
+    const filePath = path.join('content/externalblogs', filename);
     fs.writeFile(filePath, mdString, err => {
       if (err) throw err;
       console.log(`${filename} has been created successfully.`); // eslint-disable-line no-console
