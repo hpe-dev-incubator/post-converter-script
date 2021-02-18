@@ -85,8 +85,10 @@ title: ${postTitle}
 date: ${postData.date}
 author: ${postData.author || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
-path: ${slug}
 authorimage: ${authorimage}
+featuredBlog:
+priority:
+thumbnailimage:
 ---
 `;
 
@@ -152,8 +154,8 @@ const createMdFromHashID = async hashId => {
   // fetch blogs which are only released
   if (postData.status === 'PUBLISHED') {
     const content = postData.content.replace(
-      /\/uploads\/media+/g,
-      'https://hpe-developer-portal.s3.amazonaws.com/uploads/media',
+      /\(\/uploads\/media+/g,
+      '(https://hpe-developer-portal.s3.amazonaws.com/uploads/media',
     );
     // Colons in the title break frontmatter. Use quotes instead.
     const postTitle = JSON.stringify(postData.title);
@@ -189,8 +191,10 @@ title: ${postTitle}
 date: ${postData.createdAt}
 author: ${authorName || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
-path: ${blogSlug}
 authorimage: ${authorimage}
+featuredBlog:
+priority:
+thumbnailimage:
 ---
 `;
 
