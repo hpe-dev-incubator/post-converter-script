@@ -86,7 +86,7 @@ date: ${postData.date}
 author: ${postData.author || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
 authorimage: ${authorimage}
-featuredBlog:
+featuredBlog: false
 priority:
 thumbnailimage:
 ---
@@ -192,7 +192,7 @@ date: ${postData.createdAt}
 author: ${authorName || 'HPE DEV staff'} 
 tags: ${postData.tags.length ? tagsString : '[]'}
 authorimage: ${authorimage}
-featuredBlog:
+featuredBlog: false
 priority:
 thumbnailimage:
 ---
